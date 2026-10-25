@@ -3,7 +3,7 @@ const PROFILE = {
   name: "Md Rahat Alamgir",
   badge: "Open to junior roles and internships",
   tagline: "Building small games and mobile projects while growing my development skills.",
-  bio: "I'm a Computer Science and Engineering graduate passionate about game development and mobile app development with Flutter. I enjoy learning by building projects, experimenting with gameplay mechanics, and creating user-friendly app interfaces. I'm always exploring new ideas, improving my skills, and turning what I learn into practical projects.",
+  bio: "I'm a Computer Science and Engineering student at the University of Asia Pacific with a deep passion game development and mobile app development with Flutter. I enjoy learning by building projects, experimenting with gameplay mechanics, and creating user-friendly app interfaces. I'm always exploring new ideas, improving my skills, and turning what I learn into practical projects.",
   email: "rahatalamgir93@gmail.com", 
   roll: "Roll: Add your roll number", 
   location: "3/3, Vogoboti Benarjee Road, Tikatuli, Dhaka-1203, Bangladesh",
@@ -23,7 +23,8 @@ const PROFILE = {
       description: "A Flappy Bird-inspired 2D game built with Flutter and the Flame game engine. The project uses game components, collision detection and parallax background.",
       details: "Built as a learning project with Flutter, Dart, and Flame. Implemented the bird gameplay, obstacle interactions, collision detection, parallax background and Store best score locally.",
       tags: ["Flutter", "Dart", "Flame", "parallax background"],
-      repo: "https://github.com/RahatAlamgir/flappy_bird.git" 
+      repo: "https://github.com/RahatAlamgir/flappy_bird.git",
+      youtube: "https://youtube.com/shorts/QBKQ3Z4OK9U?si=KenCxDbvZViIRkUy" 
     },
     {
       id: "task-manager",
@@ -35,7 +36,8 @@ const PROFILE = {
       description: "A task management application built with Flutter and Dart using REST API integration.",
       details: "User Sign Up and Login, Update Profile, Tasks CRUD operation, Search Tasks, Update Task Status (New, In Progress, Completed)",
       tags: ["Flutter", "Dart", "Rest API"],
-      repo: "https://github.com/RahatAlamgir/task_manager.git"
+      repo: "https://github.com/RahatAlamgir/task_manager.git",
+      youtube: ""
     },
     {
       id: "contact_management_app",
@@ -47,7 +49,8 @@ const PROFILE = {
       description: "Flutter Contact Management App built with a local database.",
       details: "The app provides complete CRUD functionality for managing contacts, along with search and favorite-contact features. Also can swap between dark and light theme",
       tags: ["Flutter", "Dart", "sqflite"],
-      repo: "https://github.com/RahatAlamgir/contact_management_app.git"
+      repo: "https://github.com/RahatAlamgir/contact_management_app.git",
+      youtube: ""
     },
     {
       id: "third-person-shooter-prototype",
@@ -59,7 +62,8 @@ const PROFILE = {
       description: "3D Third person shooter prototype made with Unity",
       details: "Main Focus was Third-person character movement (extended starter asset), shooting and Basic object interaction. DOTween for (door/chest animation, moving object)",
       tags: ["Unity","C#","DOTween","Starter Assets"],
-      repo: "https://github.com/RahatAlamgir/Third-person-shooter-prototype.git"
+      repo: "https://github.com/RahatAlamgir/Third-person-shooter-prototype.git",
+      youtube: "https://youtu.be/QGNqRSfj12A?si=bPyxzn1xDXOzzpsN"
     },
     {
       id: "django-project-sample",
@@ -71,7 +75,8 @@ const PROFILE = {
       description: "A Python/Django backend application project.",
       details: "Developed using Django MVC structure, SQLite database.",
       tags: ["Python", "Django", "SQLite"],
-      repo: "https://github.com/RahatAlamgir/RideSchedule.git"
+      repo: "https://github.com/RahatAlamgir/RideSchedule.git",
+      youtube: ""
     },
     {
       id: "action-platformer-prototype",
@@ -83,7 +88,8 @@ const PROFILE = {
       description: "Hollow Knight style 2D fast movement action platform made with Godot",
       details: "",
       tags: ["Godot","gdscript","2D"],
-      repo: "https://github.com/RahatAlamgir/action-platformer.git"
+      repo: "https://github.com/RahatAlamgir/action-platformer.git",
+      youtube: "https://youtu.be/28O3mSs0PSc?si=zenrWMs_nqlYEtjp"
     },
     {
       id: "compiler-project",
@@ -95,10 +101,11 @@ const PROFILE = {
       description: "A mini compiler written in Python supporting arithmetic and control structures.",
       details: "Parses custom C-like syntax and emits targeting assembly instructions.",
       tags: ["Python", "Compiler", "Assembly"],
-      repo: "https://github.com/RahatAlamgir/Mini-Compiler.git"
+      repo: "https://github.com/RahatAlamgir/Mini-Compiler.git",
+      youtube: ""
     },
     {
-      id: "C++-project",
+      id: "C++-project-clock",
       title: "Analog Clock",
       category: "System Software",
       subtitle: "C++ OpenGL",
@@ -107,10 +114,11 @@ const PROFILE = {
       description: "Analog Clock Using OpenGL and C++",
       details: "Analog Clock Using OpenGL and C++",
       tags: ["C++", "OpenGL"],
-      repo: "https://github.com/RahatAlamgir/AnalogClock.git"
+      repo: "https://github.com/RahatAlamgir/AnalogClock.git",
+      youtube: ""
     },
     {
-      id: "C++-project",
+      id: "C++-project-pacman",
       title: "Pacman",
       category: "Game Dev",
       subtitle: "C++ OpenGL",
@@ -119,7 +127,8 @@ const PROFILE = {
       description: "Pac-man game using OpenGL C++",
       details: "Pac-man game using OpenGL C++",
       tags: ["C++", "OpenGL","arcade game"],
-      repo: "https://github.com/RahatAlamgir/Pac-man.git"
+      repo: "https://github.com/RahatAlamgir/Pac-man.git",
+      youtube: ""
     }
   ]
 };
@@ -137,7 +146,11 @@ function applyProfile() {
   $$('[data-profile="roll"]').forEach(el => el.textContent = PROFILE.roll);
   $$('[data-phone-display]').forEach(el => el.textContent = PROFILE.phone);
   $$('[data-profile="phoneLink"]').forEach(el => el.href = `tel:${PROFILE.phone.replace(/[^+0-9]/g, '')}`);
-  $$('[data-profile="cvLink"]').forEach(el => el.href = PROFILE.cv);
+  $$('[data-profile="cvLink"]').forEach(el => {
+    el.href = PROFILE.cv;
+    el.target = "_blank";
+    el.rel = "noreferrer";
+  });
   $$('[data-email-link], [data-email-button]').forEach(el => el.href = `mailto:${PROFILE.email}`);
   $$('[data-link="github"]').forEach(el => el.href = PROFILE.github);
   $$('[data-link="linkedin"]').forEach(el => el.href = PROFILE.linkedin);
@@ -189,7 +202,10 @@ function renderProjects(filter = activeProjectFilter) {
         </div>
         <div class="project-actions">
           <button class="text-button" data-project="${escapeHTML(project.id)}">View project details ↗</button>
-          ${project.repo ? `<a class="repo-link" href="${escapeAttr(project.repo)}" target="_blank" rel="noreferrer">GitHub ↗</a>` : '<span class="repo-link">Repository not added</span>'}
+          <div class="project-links-group" style="display:flex; gap:10px; align-items:center;">
+            ${project.youtube ? `<a class="repo-link youtube-link" href="${escapeAttr(project.youtube)}" target="_blank" rel="noreferrer">YouTube ↗</a>` : ''}
+            ${project.repo ? `<a class="repo-link" href="${escapeAttr(project.repo)}" target="_blank" rel="noreferrer">GitHub ↗</a>` : '<span class="repo-link">Repository not added</span>'}
+          </div>
         </div>
       </article>
     `;
@@ -216,9 +232,12 @@ function openProject(id) {
   $('#dialogTitle').textContent = project.title;
   $('#dialogDescription').textContent = project.details;
   $('#dialogTags').innerHTML = project.tags.map(tag => `<span>${escapeHTML(tag)}</span>`).join('');
-  $('#dialogLinks').innerHTML = project.repo
-    ? `<a class="button" href="${escapeAttr(project.repo)}" target="_blank" rel="noreferrer">View source code ↗</a>`
-    : `<span class="form-note">Add a real repository link in js/script.js when it's ready.</span>`;
+  
+  $('#dialogLinks').innerHTML = `
+    ${project.repo ? `<a class="button" href="${escapeAttr(project.repo)}" target="_blank" rel="noreferrer">View source code ↗</a>` : ''}
+    ${project.youtube ? `<a class="button button-outline" href="${escapeAttr(project.youtube)}" target="_blank" rel="noreferrer">Watch on YouTube ↗</a>` : ''}
+    ${!project.repo && !project.youtube ? `<span class="form-note">Add a real link in js/script.js when it's ready.</span>` : ''}
+  `;
   $('#projectDialog').showModal();
 }
 
