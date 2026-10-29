@@ -136,7 +136,6 @@ body.light .terminal-card:before{background:#34d39918!important}
 body.light .about-photo-frame{background:#fff}
 button:focus-visible,a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
 
-
 @media(max-width:950px){
   .hero{grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:30px}
   .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -187,4 +186,130 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--green);outline-offs
   .about-profile-copy .stat-card{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:10px}
   .filter-row{grid-template-columns:1fr 1fr}
   .project-actions{align-items:flex-start}
+}
+
+/* Custom Skills Section (Reference Style) */
+.skills-grid-custom {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.skill-category-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+.skill-category-card h3 {
+  font-size: 18px;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+.skill-bar-item {
+  margin-bottom: 16px;
+}
+.skill-bar-item:last-child {
+  margin-bottom: 0;
+}
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.skill-progress-track {
+  width: 100%;
+  height: 8px;
+  background: var(--surface2);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.skill-progress-fill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 999px;
+}
+
+/* Custom Services Section (Reference Style with single-color icons) */
+.services-grid-custom {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.service-card-custom {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow);
+  transition: transform .2s, border-color .2s;
+}
+.service-card-custom:hover {
+  transform: translateY(-4px);
+  border-color: #34d39970;
+}
+.service-icon-wrap {
+  color: var(--green);
+  margin-bottom: 14px;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+}
+.service-card-custom h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.service-card-custom p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Slightly Larger Project Dialog Window */
+.project-dialog {
+  width: min(720px, calc(100% - 30px)) !important;
+  max-height: 90vh !important;
+  padding: 32px !important;
+}
+.project-dialog .dialog-art {
+  height: 320px !important;
+}
+
+/* Responsive adjustments & 3 buttons per row on mobile for filters */
+@media(max-width: 1024px) {
+  .services-grid-custom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .skills-grid-custom {
+    grid-template-columns: 1fr;
+  }
+}
+@media(max-width: 680px) {
+  .services-grid-custom {
+    grid-template-columns: 1fr;
+  }
+  .filter-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    width: 100%;
+  }
+  .filter-button {
+    text-align: center;
+    padding: 8px 4px;
+    font-size: 10px;
+  }
 }

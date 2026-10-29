@@ -1,138 +1,4 @@
-// script.js
-const PROFILE = {
-  name: "Md Rahat Alamgir",
-  badge: "Open to junior roles and internships",
-  tagline: "Building small games and mobile projects while growing my development skills.",
-  bio: "I'm a Computer Science and Engineering student at the University of Asia Pacific with a deep passion game development and mobile app development with Flutter. I enjoy learning by building projects, experimenting with gameplay mechanics, and creating user-friendly app interfaces. I'm always exploring new ideas, improving my skills, and turning what I learn into practical projects.",
-  email: "rahatalamgir93@gmail.com", 
-  roll: "Roll: Add your roll number", 
-  location: "3/3, Vogoboti Benarjee Road, Tikatuli, Dhaka-1203, Bangladesh",
-  phone: "+880 1709086651", 
-  github: "https://github.com/RahatAlamgir", 
-  linkedin: "https://www.linkedin.com/in/rahat-alamgir/", 
-  facebook: "https://www.facebook.com/Rahat.A.145/", 
-  cv: "assets/Rahat-Alamgir-CV.pdf", 
-  projects: [
-    {
-      id: "flappy-bird",
-      title: "Flappy Bird Clone",
-      category: "Game Dev",
-      subtitle: "Flutter & Flame",
-      image: "assets/projects/FlappyBird.jpg", 
-      icon: "🐤",
-      description: "A Flappy Bird-inspired 2D game built with Flutter and the Flame game engine. The project uses game components, collision detection and parallax background.",
-      details: "Built as a learning project with Flutter, Dart, and Flame. Implemented the bird gameplay, obstacle interactions, collision detection, parallax background and Store best score locally.",
-      tags: ["Flutter", "Dart", "Flame", "parallax background"],
-      repo: "https://github.com/RahatAlamgir/flappy_bird.git",
-      youtube: "https://youtube.com/shorts/QBKQ3Z4OK9U?si=KenCxDbvZViIRkUy" 
-    },
-    {
-      id: "task-manager",
-      title: "Task Manager App",
-      category: "Flutter & Mobile",
-      subtitle: "Mobile productivity app",
-      image: "assets/projects/MyTask.jpg",
-      icon: "✓",
-      description: "A task management application built with Flutter and Dart using REST API integration.",
-      details: "User Sign Up and Login, Update Profile, Tasks CRUD operation, Search Tasks, Update Task Status (New, In Progress, Completed)",
-      tags: ["Flutter", "Dart", "Rest API"],
-      repo: "https://github.com/RahatAlamgir/task_manager.git",
-      youtube: ""
-    },
-    {
-      id: "contact_management_app",
-      title: "Contact Management App",
-      category: "Flutter & Mobile",
-      subtitle: "Mobile productivity app",
-      image: "assets/projects/ContactManagementApp.jpg",
-      icon: "✓",
-      description: "Flutter Contact Management App built with a local database.",
-      details: "The app provides complete CRUD functionality for managing contacts, along with search and favorite-contact features. Also can swap between dark and light theme",
-      tags: ["Flutter", "Dart", "sqflite"],
-      repo: "https://github.com/RahatAlamgir/contact_management_app.git",
-      youtube: ""
-    },
-    {
-      id: "third-person-shooter-prototype",
-      title: "Third Person Shooter prototype",
-      category: "Game Dev",
-      subtitle: "Unity",
-      image: "assets/projects/3dThirdPersonShooter.jpg",
-      icon: "🎮",
-      description: "3D Third person shooter prototype made with Unity",
-      details: "Main Focus was Third-person character movement (extended starter asset), shooting and Basic object interaction. DOTween for (door/chest animation, moving object)",
-      tags: ["Unity","C#","DOTween","Starter Assets"],
-      repo: "https://github.com/RahatAlamgir/Third-person-shooter-prototype.git",
-      youtube: "https://youtu.be/QGNqRSfj12A?si=bPyxzn1xDXOzzpsN"
-    },
-    {
-      id: "django-project-sample",
-      title: "RideSchedule",
-      category: "Django",
-      subtitle: "Web backend",
-      image: "assets/projects/rideSchedule.jpg",
-      icon: "🐍",
-      description: "A Python/Django backend application project.",
-      details: "Developed using Django MVC structure, SQLite database.",
-      tags: ["Python", "Django", "SQLite"],
-      repo: "https://github.com/RahatAlamgir/RideSchedule.git",
-      youtube: ""
-    },
-    {
-      id: "action-platformer-prototype",
-      title: "2D Action Platformer Prototype",
-      category: "Game Dev",
-      subtitle: "Godot",
-      image: "assets/projects/2dActionPlatform.jpg",
-      icon: "🎮",
-      description: "Hollow Knight style 2D fast movement action platform made with Godot",
-      details: "",
-      tags: ["Godot","gdscript","2D"],
-      repo: "https://github.com/RahatAlamgir/action-platformer.git",
-      youtube: "https://youtu.be/28O3mSs0PSc?si=zenrWMs_nqlYEtjp"
-    },
-    {
-      id: "compiler-project",
-      title: "Mini C-to-Assembly Compiler",
-      category: "System Software",
-      subtitle: "Core Python",
-      image: "",
-      icon: "⚙️",
-      description: "A mini compiler written in Python supporting arithmetic and control structures.",
-      details: "Parses custom C-like syntax and emits targeting assembly instructions.",
-      tags: ["Python", "Compiler", "Assembly"],
-      repo: "https://github.com/RahatAlamgir/Mini-Compiler.git",
-      youtube: ""
-    },
-    {
-      id: "C++-project-clock",
-      title: "Analog Clock",
-      category: "System Software",
-      subtitle: "C++ OpenGL",
-      image: "assets/projects/analogClock.jpg",
-      icon: "⚙️",
-      description: "Analog Clock Using OpenGL and C++",
-      details: "Analog Clock Using OpenGL and C++",
-      tags: ["C++", "OpenGL"],
-      repo: "https://github.com/RahatAlamgir/AnalogClock.git",
-      youtube: ""
-    },
-    {
-      id: "C++-project-pacman",
-      title: "Pacman",
-      category: "Game Dev",
-      subtitle: "C++ OpenGL",
-      image: "assets/projects/pacman.jpg",
-      icon: "🎮",
-      description: "Pac-man game using OpenGL C++",
-      details: "Pac-man game using OpenGL C++",
-      tags: ["C++", "OpenGL","arcade game"],
-      repo: "https://github.com/RahatAlamgir/Pac-man.git",
-      youtube: ""
-    }
-  ]
-};
-
+// script.js — portfolio functionality
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
@@ -155,7 +21,91 @@ function applyProfile() {
   $$('[data-link="github"]').forEach(el => el.href = PROFILE.github);
   $$('[data-link="linkedin"]').forEach(el => el.href = PROFILE.linkedin);
   $$('[data-link="facebook"]').forEach(el => el.href = PROFILE.facebook);
-  $('#year').textContent = new Date().getFullYear();
+  
+  const year = $('#year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  renderAboutStats();
+  renderSkills();
+  renderServices();
+  renderEducation();
+}
+
+function renderAboutStats() {
+  const container = $('#aboutStatsContainer');
+  if (!container || !PROFILE.projects) return;
+
+  const totalProjects = PROFILE.projects.length;
+  const gameDevCount = PROFILE.projects.filter(p => p.categories && p.categories.includes("Game Dev")).length;
+  const mobileCount = PROFILE.projects.filter(p => p.categories && p.categories.includes("Mobile")).length;
+
+  const formatNum = (num) => String(num).padStart(2, '0');
+
+  container.innerHTML = `
+    <div class="stat-card"><strong>${formatNum(totalProjects)}</strong><span>Portfolio projects</span></div>
+    <div class="stat-card"><strong>${formatNum(gameDevCount)}</strong><span>Game development</span></div>
+    <div class="stat-card"><strong>${formatNum(mobileCount)}</strong><span>Mobile development</span></div>
+  `;
+}
+
+function renderSkills() {
+  const container = $('#skillsContainer');
+  if (!container || !PROFILE.skills) return;
+
+  container.innerHTML = PROFILE.skills.map(cat => `
+    <div class="skill-category-card">
+      <h3>${escapeHTML(cat.category)}</h3>
+      ${cat.items.map(skill => `
+        <div class="skill-bar-item">
+          <div class="skill-info">
+            <span>${escapeHTML(skill.name)}</span>
+            <span>${escapeHTML(skill.level)}</span>
+          </div>
+          <div class="skill-progress-track">
+            <div class="skill-progress-fill" style="width: ${escapeAttr(skill.level)};"></div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `).join('');
+}
+
+function renderServices() {
+  const container = $('#servicesContainer');
+  if (!container || !PROFILE.services) return;
+
+  container.innerHTML = PROFILE.services.map(s => `
+    <article class="service-card-custom">
+      <div class="service-icon-wrap">${s.icon}</div>
+      <h3>${escapeHTML(s.title)}</h3>
+      <p>${escapeHTML(s.description)}</p>
+    </article>
+  `).join('');
+}
+
+function renderEducation() {
+  const container = $('#educationContainer');
+  if (!container || !PROFILE.education) return;
+
+  container.innerHTML = PROFILE.education.map(edu => `
+    <article class="timeline-item">
+      <span class="timeline-dot"></span>
+      <div class="timeline-card">
+        <div class="timeline-card-body">
+          <div class="timeline-meta">${escapeHTML(edu.meta)}</div>
+          <h3>${escapeHTML(edu.title)}</h3>
+          <p>${edu.description}</p>
+          <div class="tag-list">
+            ${edu.tags.map(tag => `<span>${escapeHTML(tag)}</span>`).join('')}
+          </div>
+        </div>
+        <div class="timeline-logo-wrap">
+          <img src="${escapeAttr(edu.logo)}" class="timeline-logo" alt="${escapeAttr(edu.title)}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="timeline-logo-placeholder">${escapeHTML(edu.logoPlaceholder)}</span>
+        </div>
+      </div>
+    </article>
+  `).join('');
 }
 
 let activeProjectFilter = 'All';
@@ -163,23 +113,20 @@ let visibleProjectCount = 6;
 
 function filterProjects(projects, filter) {
   if (filter === 'All') return projects;
-  if (filter === 'Game Dev') return projects.filter(p => p.category === 'Game Dev');
-  if (filter === 'Flutter & Mobile') return projects.filter(p => p.category === 'Flutter & Mobile');
-  if (filter === 'Others') {
-    return projects.filter(p => p.category !== 'Game Dev' && p.category !== 'Flutter & Mobile');
-  }
-  return projects.filter(p => p.category === filter);
+  return projects.filter(p => p.categories && p.categories.includes(filter));
 }
 
 function renderProjects(filter = activeProjectFilter) {
   activeProjectFilter = filter;
   const grid = $('#projectGrid');
+  if (!grid) return;
   const filteredProjects = filterProjects(PROFILE.projects, filter);
   const projects = filteredProjects.slice(0, visibleProjectCount);
 
   if (projects.length === 0) {
     grid.innerHTML = `<p class="body-copy" style="grid-column: 1/-1; padding: 20px 0;">No projects found in this category.</p>`;
-    $('#showMoreProjects').hidden = true;
+    const moreButton = $('#showMoreProjects');
+    if (moreButton) moreButton.hidden = true;
     return;
   }
 
@@ -195,7 +142,7 @@ function renderProjects(filter = activeProjectFilter) {
           <span class="art-label">${escapeHTML(project.subtitle)}</span>
         </div>
         <div class="project-content">
-          <span class="project-category">${escapeHTML(project.category)}</span>
+          <span class="project-category">${escapeHTML(project.categories ? project.categories.join(' • ') : '')}</span>
           <div class="project-title-row"><h3>${escapeHTML(project.title)}</h3></div>
           <p class="project-description">${escapeHTML(project.description)}</p>
           <div class="tag-list">${project.tags.map(tag => `<span>${escapeHTML(tag)}</span>`).join('')}</div>
@@ -213,8 +160,10 @@ function renderProjects(filter = activeProjectFilter) {
 
   $$('[data-project]', grid).forEach(button => button.addEventListener('click', () => openProject(button.dataset.project)));
   const moreButton = $('#showMoreProjects');
-  moreButton.hidden = filteredProjects.length <= visibleProjectCount;
-  moreButton.textContent = `Show more projects (${filteredProjects.length - visibleProjectCount} remaining)`;
+  if (moreButton) {
+    moreButton.hidden = filteredProjects.length <= visibleProjectCount;
+    moreButton.textContent = `Show more projects (${filteredProjects.length - visibleProjectCount} remaining)`;
+  }
 }
 
 function openProject(id) {
@@ -222,18 +171,24 @@ function openProject(id) {
   if (!project) return;
   
   const dialogArt = $('#dialogArt');
+  if (!dialogArt || !$('#projectDialog')) return;
   if (project.image) {
     dialogArt.innerHTML = `<img src="${escapeAttr(project.image)}" alt="${escapeAttr(project.title)}" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">`;
   } else {
     dialogArt.textContent = project.icon || '📁';
   }
   
-  $('#dialogCategory').textContent = project.category;
-  $('#dialogTitle').textContent = project.title;
-  $('#dialogDescription').textContent = project.details;
-  $('#dialogTags').innerHTML = project.tags.map(tag => `<span>${escapeHTML(tag)}</span>`).join('');
+  const dialogCategory = $('#dialogCategory');
+  const dialogTitle = $('#dialogTitle');
+  const dialogDescription = $('#dialogDescription');
+  const dialogTags = $('#dialogTags');
+  if (dialogCategory) dialogCategory.textContent = project.categories ? project.categories.join(' • ') : '';
+  if (dialogTitle) dialogTitle.textContent = project.title;
+  if (dialogDescription) dialogDescription.textContent = project.details;
+  if (dialogTags) dialogTags.innerHTML = project.tags.map(tag => `<span>${escapeHTML(tag)}</span>`).join('');
   
-  $('#dialogLinks').innerHTML = `
+  const dialogLinks = $('#dialogLinks');
+  if (dialogLinks) dialogLinks.innerHTML = `
     ${project.repo ? `<a class="button" href="${escapeAttr(project.repo)}" target="_blank" rel="noreferrer">View source code ↗</a>` : ''}
     ${project.youtube ? `<a class="button button-outline" href="${escapeAttr(project.youtube)}" target="_blank" rel="noreferrer">Watch on YouTube ↗</a>` : ''}
     ${!project.repo && !project.youtube ? `<span class="form-note">Add a real link in js/script.js when it's ready.</span>` : ''}
@@ -251,9 +206,11 @@ function escapeAttr(value) {
 applyProfile();
 renderProjects();
 
-$('#dialogClose').addEventListener('click', () => $('#projectDialog').close());
-$('#projectDialog').addEventListener('click', event => {
-  if (event.target === $('#projectDialog')) $('#projectDialog').close();
+const dialogClose = $('#dialogClose');
+const projectDialog = $('#projectDialog');
+if (dialogClose && projectDialog) dialogClose.addEventListener('click', () => projectDialog.close());
+if (projectDialog) projectDialog.addEventListener('click', event => {
+  if (event.target === projectDialog) projectDialog.close();
 });
 
 $$('.filter-button').forEach(button => {
@@ -264,34 +221,45 @@ $$('.filter-button').forEach(button => {
   });
 });
 
-$('#showMoreProjects').addEventListener('click', () => {
+const showMoreProjects = $('#showMoreProjects');
+if (showMoreProjects) showMoreProjects.addEventListener('click', () => {
   visibleProjectCount += 6;
   renderProjects(activeProjectFilter);
 });
 
-$('#themeToggle').addEventListener('click', () => {
+const themeToggle = $('#themeToggle');
+if (themeToggle) themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('light');
   const light = document.body.classList.contains('light');
-  $('#themeToggle').textContent = light ? '☾' : '☼';
-  document.querySelector('meta[name="theme-color"]').content = light ? '#f5f7fb' : '#090d16';
+  themeToggle.textContent = light ? '☾' : '☼';
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  if (themeMeta) themeMeta.content = light ? '#f5f7fb' : '#090d16';
 });
 
-$('#menuToggle').addEventListener('click', () => {
+const menuToggle = $('#menuToggle');
+if (menuToggle) menuToggle.addEventListener('click', () => {
   const nav = $('#mobileNav');
+  if (!nav) return;
   const open = nav.classList.toggle('open');
-  $('#menuToggle').setAttribute('aria-expanded', String(open));
-  $('#menuToggle').setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-  $('#menuToggle').textContent = open ? '×' : '☰';
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  menuToggle.textContent = open ? '×' : '☰';
 });
 
 $$('#mobileNav a').forEach(link => link.addEventListener('click', () => {
-  $('#mobileNav').classList.remove('open');
-  $('#menuToggle').setAttribute('aria-expanded', 'false');
-  $('#menuToggle').textContent = '☰';
+  const nav = $('#mobileNav');
+  const toggle = $('#menuToggle');
+  if (nav) nav.classList.remove('open');
+  if (toggle) {
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.textContent = '☰';
+  }
 }));
 
-$('#copyEmail').addEventListener('click', async () => {
+const copyEmail = $('#copyEmail');
+if (copyEmail) copyEmail.addEventListener('click', async () => {
   const status = $('#copyStatus');
+  if (!status) return;
   try {
     await navigator.clipboard.writeText(PROFILE.email);
     status.textContent = 'Email copied to clipboard.';
@@ -303,5 +271,6 @@ $('#copyEmail').addEventListener('click', async () => {
 
 window.addEventListener('scroll', () => {
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  $('#scrollProgress').style.width = `${maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0}%`;
+  const progress = $('#scrollProgress');
+  if (progress) progress.style.width = `${maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0}%`;
 }, { passive: true });
