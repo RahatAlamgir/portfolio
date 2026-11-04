@@ -1,0 +1,26 @@
+/* Responsive: final overrides (1024px, 680px) */
+/* Responsive adjustments & 3 buttons per row on mobile for filters */
+@media(max-width: 1024px) {
+  .services-grid-custom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .skills-grid-custom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 680px) {
+  .services-grid-custom {
+    grid-template-columns: 1fr;
+  }
+  .filter-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    width: 100%;
+  }
+  .filter-button {
+    text-align: center;
+    padding: 8px 4px;
+    font-size: 10px;
+  }
+}

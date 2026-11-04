@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "mobile",
+    "title": "App Development",
+    "description": "Creating user-friendly mobile applications with seamless functionality and appealing interfaces using Flutter and Dart."
+  },
+  {
+    "icon": "gamepad",
+    "title": "Game Development",
+    "description": "Creating engaging 2D and 3D indie game prototypes and gameplay mechanics using Unity, Godot, and Flutter's Flame engine."
+  },
+  {
+    "icon": "palette",
+    "title": "UI/UX Design",
+    "description": "Designing intuitive and visually appealing interfaces that enhance user experience and engagement."
+  },
+  {
+    "icon": "code",
+    "title": "Web Development",
+    "description": "Building responsive and scalable web applications using HTML, CSS, Django, and databases."
+  }
+]

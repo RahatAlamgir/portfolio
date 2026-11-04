@@ -1,0 +1,29 @@
+[
+  {
+    "category": "Flutter Mobile Dev",
+    "items": [
+      { "name": "Flutter & Dart", "level": "85%" },
+      { "name": "Provider", "level": "70%" },
+      { "name": "Firebase", "level": "50%" },
+      { "name": "REST API implementation", "level": "60%" }
+    ]
+  },
+  {
+    "category": "Game Dev",
+    "items": [
+      { "name": "Unity / C#", "level": "70%" },
+      { "name": "Godot / GDScript", "level": "60%" },
+      { "name": "Pygame", "level": "50%" },
+      { "name": "Flame Engine", "level": "50%" }
+    ]
+  },
+  {
+    "category": "Tools & Workflow",
+    "items": [
+      { "name": "Git & GitHub", "level": "85%" },
+      { "name": "VS Code & Android Studio", "level": "82%" },
+      { "name": "Canva", "level": "78%" },
+      { "name": "Figma", "level": "70%" }
+    ]
+  }
+]

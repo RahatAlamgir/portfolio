@@ -1,0 +1,12 @@
+/* About profile photo */
+/* Profile photo */
+.profile-photo {
+  width: 92px;
+  height: 92px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 2px solid var(--green);
+  box-shadow: 0 0 0 5px #34d39918;
+}

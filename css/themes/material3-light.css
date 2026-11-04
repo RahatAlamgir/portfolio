@@ -1,0 +1,266 @@
+/* Material 3 color roles for the light theme (colors only).
+   Palette: a green seed, tonal values hand-picked to the M3 light scheme.
+   Everything is scoped to body.light, so the dark theme is unchanged.
+   Loaded last so it overrides earlier light-theme colors. */
+
+body.light {
+  /* M3 color roles */
+  --m3-primary: #2a7d64;
+  --m3-on-primary: #ffffff;
+  --m3-primary-hover: #236b56;
+  --m3-primary-container: #d6f2e7;
+  --m3-on-primary-container: #0f3b2e;
+  --m3-secondary-container: #e3f1eb;
+  --m3-on-secondary-container: #17332a;
+  --m3-background: #fafcfb;
+  --m3-on-background: #1c2622;
+  --m3-surface-lowest: #ffffff;
+  --m3-surface-low: #f6f9f7;
+  --m3-surface-container: #f1f5f3;
+  --m3-surface-high: #eaf0ed;
+  --m3-surface-highest: #e2e9e5;
+  --m3-on-surface: #1c2622;
+  --m3-on-surface-variant: #55625c;
+  --m3-outline: #a9b5af;
+  --m3-outline-variant: #e2e9e5;
+  --m3-inverse-surface: #27302c;
+  --m3-inverse-on-surface: #eef3f0;
+  --m3-inverse-primary: #8fd6bd;
+
+  /* Map the site's existing variables onto the M3 roles */
+  --bg: var(--m3-background);
+  --surface: var(--m3-surface-lowest);
+  --surface2: var(--m3-surface-container);
+  --text: var(--m3-on-surface);
+  --muted: var(--m3-on-surface-variant);
+  --border: var(--m3-outline-variant);
+  --green: var(--m3-primary);
+  --shadow: 0 1px 2px #1c26220d, 0 4px 14px #1c262208;
+}
+
+/* Page text and brand */
+body.light .brand-white {
+  color: var(--m3-on-surface);
+}
+body.light .brand-green,
+body.light .eyebrow,
+body.light .gradient-text,
+body.light .stat-card strong,
+body.light .project-category,
+body.light .timeline-meta,
+body.light .text-button,
+body.light .skill-category-card h3,
+body.light .service-icon-wrap,
+body.light .contact-info-icon,
+body.light .small-note,
+body.light .hero h3.brand-green,
+body.light .desktop-nav a:hover,
+body.light .mobile-nav a:hover,
+body.light .site-footer a:hover,
+body.light .icon-button:hover,
+body.light .email-copy:hover,
+body.light .about-photo-placeholder,
+body.light .timeline-logo-placeholder,
+body.light .contact-note-mark,
+body.light .repo-link:hover {
+  color: var(--m3-primary);
+}
+body.light .gradient-text {
+  color: var(--m3-primary) !important;
+  -webkit-text-fill-color: var(--m3-primary) !important;
+}
+body.light .body-copy,
+body.light .lead,
+body.light .project-description,
+body.light .timeline-card p,
+body.light .contact-details,
+body.light .section-subtitle,
+body.light .focus-card p,
+body.light .repo-link,
+body.light .email-copy,
+body.light .contact-form label,
+body.light .form-note,
+body.light .contact-note-card p,
+body.light .contact-label {
+  color: var(--m3-on-surface-variant);
+}
+
+/* Buttons */
+body.light .button {
+  background: var(--m3-primary);
+  color: var(--m3-on-primary);
+  box-shadow: 0 1px 2px #0000000f;
+}
+body.light .button:hover {
+  background: var(--m3-primary-hover);
+}
+body.light .button-outline {
+  background: var(--m3-surface-lowest);
+  color: var(--m3-on-surface);
+  border-color: var(--m3-outline);
+  box-shadow: none;
+}
+body.light .button-outline:hover {
+  background: var(--m3-surface-container);
+  color: var(--m3-primary);
+}
+body.light .icon-button {
+  background: var(--m3-surface-lowest);
+  border-color: var(--m3-outline-variant);
+  color: var(--m3-on-surface);
+}
+body.light .icon-button:hover {
+  border-color: var(--m3-primary);
+}
+body.light .email-copy {
+  background: var(--m3-surface-lowest);
+  border-color: var(--m3-outline-variant);
+}
+body.light .email-copy:hover {
+  border-color: var(--m3-primary);
+}
+
+/* Filters */
+body.light .filter-button {
+  background: var(--m3-surface-lowest);
+  border-color: var(--m3-outline-variant);
+  color: var(--m3-on-surface-variant);
+}
+body.light .filter-button:hover {
+  color: var(--m3-on-surface);
+}
+body.light .filter-button.active {
+  background: var(--m3-primary);
+  border-color: var(--m3-primary);
+  color: var(--m3-on-primary);
+}
+
+/* Status pill and tags */
+body.light .status-pill {
+  background: var(--m3-primary-container);
+  border-color: transparent;
+  color: var(--m3-on-primary-container);
+}
+body.light .status-dot {
+  background: var(--m3-primary);
+  box-shadow: 0 0 0 4px #2a7d6420;
+}
+body.light .tag-list span {
+  background: var(--m3-surface-container);
+  border-color: var(--m3-outline-variant);
+  color: var(--m3-on-surface-variant);
+}
+
+/* Cards and containers */
+body.light .project-card,
+body.light .timeline-card,
+body.light .stat-card,
+body.light .skill-category-card,
+body.light .service-card-custom,
+body.light .contact-note-card,
+body.light .about-photo-frame {
+  background: var(--m3-surface-lowest);
+  border-color: var(--m3-outline-variant);
+}
+body.light .project-card:hover,
+body.light .service-card-custom:hover,
+body.light .timeline-card:hover {
+  border-color: var(--m3-primary);
+}
+body.light .project-art {
+  background: var(--m3-surface-high) !important;
+}
+body.light .project-dialog {
+  background: var(--m3-surface-high);
+  color: var(--m3-on-surface);
+  border-color: var(--m3-outline-variant);
+}
+body.light .project-dialog::backdrop {
+  background: #1c262280;
+}
+body.light .dialog-art,
+body.light .dialog-close {
+  background: var(--m3-surface-container);
+  color: var(--m3-on-surface);
+}
+body.light .about-photo-placeholder {
+  background: var(--m3-surface-container);
+}
+body.light .timeline-logo-wrap {
+  background: var(--m3-surface-container);
+  border-color: var(--m3-outline-variant);
+}
+body.light .service-icon-wrap {
+  background: var(--m3-surface-container);
+  border-color: var(--m3-outline-variant);
+}
+body.light .contact-info-icon {
+  background: var(--m3-surface-lowest);
+  border-color: var(--m3-outline-variant);
+}
+body.light .contact-note-mark {
+  background: var(--m3-surface-container);
+  border-color: var(--m3-outline-variant);
+}
+
+/* Skill bars */
+body.light .skill-info {
+  color: var(--m3-on-surface);
+}
+body.light .skill-progress-track {
+  background: var(--m3-surface-highest);
+  border-color: var(--m3-outline-variant);
+}
+body.light .skill-progress-fill {
+  background: var(--m3-primary);
+}
+
+/* Timeline */
+body.light .timeline {
+  border-left-color: #2a7d6440;
+}
+body.light .timeline-dot {
+  background: var(--m3-background);
+  border-color: var(--m3-primary);
+}
+
+/* Hero code card: M3 inverse surface, kept dark for contrast with the light page */
+body.light .terminal-card {
+  background: var(--m3-inverse-surface);
+  border-color: #ffffff14;
+  color: var(--m3-inverse-on-surface);
+}
+body.light .terminal-card:before {
+  background: #8fd6bd1a !important;
+}
+body.light .terminal-header {
+  color: var(--m3-outline-variant);
+  border-bottom-color: #ffffff14;
+}
+body.light .online {
+  color: var(--m3-inverse-primary);
+  background: #8fd6bd1a;
+  border-color: #8fd6bd40;
+}
+body.light .code-window {
+  color: var(--m3-inverse-on-surface);
+}
+body.light .tech-pills {
+  border-top-color: #ffffff14;
+}
+body.light .tech-pills span {
+  background: #ffffff14;
+  border-color: #ffffff14;
+  color: var(--m3-inverse-primary);
+}
+
+/* Focus ring and misc */
+body.light .load-error {
+  background: var(--m3-surface-lowest);
+  border-color: var(--m3-outline-variant);
+  color: var(--m3-on-surface);
+}
+body.light button:focus-visible,
+body.light a:focus-visible {
+  outline-color: var(--m3-primary);
+}

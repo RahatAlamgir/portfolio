@@ -1,0 +1,20 @@
+{
+  "name": "Md Rahat Alamgir",
+  "initials": "RA",
+  "photo": {
+    "src": "assets/profile.jpg",
+    "alt": "Profile photo of Rahat Alamgir"
+  },
+  "badge": "Open to junior roles and internships",
+  "tagline": "Building small games and mobile projects while growing my development skills.",
+  "bio": "I'm a Computer Science and Engineering student at the University of Asia Pacific with a deep passion for game development and mobile app development with Flutter. I enjoy learning by building projects, experimenting with gameplay mechanics, and creating user-friendly app interfaces.",
+  "email": "rahatalamgir93@gmail.com",
+  "location": "3/3, Vogoboti Benarjee Road, Tikatuli, Dhaka-1203, Bangladesh",
+  "phone": "+880 1709086651",
+  "cv": "assets/Rahat-Alamgir-CV.pdf",
+  "social": {
+    "github": "https://github.com/RahatAlamgir",
+    "linkedin": "https://www.linkedin.com/in/rahat-alamgir/",
+    "facebook": "https://www.facebook.com/Rahat.A.145/"
+  }
+}

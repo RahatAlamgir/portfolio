@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "mobile",
+    "title": "Service title",
+    "description": "Describe this service in one or two sentences."
+  },
+  {
+    "icon": "gamepad",
+    "title": "Service title",
+    "description": "Describe this service in one or two sentences."
+  },
+  {
+    "icon": "palette",
+    "title": "Service title",
+    "description": "Describe this service in one or two sentences."
+  },
+  {
+    "icon": "code",
+    "title": "Service title",
+    "description": "Describe this service in one or two sentences."
+  }
+]

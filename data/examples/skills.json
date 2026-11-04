@@ -1,0 +1,16 @@
+[
+  {
+    "category": "Category 1",
+    "items": [
+      { "name": "Skill name", "level": "80%" },
+      { "name": "Another skill", "level": "60%" }
+    ]
+  },
+  {
+    "category": "Category 2",
+    "items": [
+      { "name": "Skill name", "level": "70%" },
+      { "name": "Another skill", "level": "50%" }
+    ]
+  }
+]

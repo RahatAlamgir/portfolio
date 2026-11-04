@@ -1,0 +1,11 @@
+/* Project dialog overrides */
+/* Slightly Larger Project Dialog Window */
+.project-dialog {
+  width: min(720px, calc(100% - 30px)) !important;
+  max-height: 90vh !important;
+  padding: 32px !important;
+}
+
+.project-dialog .dialog-art {
+  height: 320px !important;
+}
