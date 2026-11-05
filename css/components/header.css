@@ -1,0 +1,87 @@
+/* Sticky header, navigation, theme toggle, mobile menu */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding-block: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.nav-links a {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--text-soft);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.nav-links a:hover { color: var(--text); background: var(--surface); }
+.nav-links a.active { color: var(--accent-text); }
+
+.header-actions { display: flex; align-items: center; gap: 8px; }
+
+/* Theme toggle shows the icon of the theme you'll switch TO */
+.icon-moon { display: none; }
+[data-theme="light"] .icon-sun { display: none; }
+[data-theme="light"] .icon-moon { display: block; }
+
+.menu-btn { display: none; }
+.menu-btn .icon-close { display: none; }
+.menu-btn[aria-expanded="true"] .icon-open { display: none; }
+.menu-btn[aria-expanded="true"] .icon-close { display: block; }
+
+.mobile-menu {
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+  padding: 8px 16px 20px;
+}
+.mobile-menu[hidden] { display: none; }
+.mobile-menu a:not(.btn) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 0 8px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+}
+.mobile-menu a span { font-family: var(--font-mono); font-size: 12px; color: var(--muted); font-weight: 400; }
+.mobile-menu .btn { width: 100%; margin-top: 16px; }

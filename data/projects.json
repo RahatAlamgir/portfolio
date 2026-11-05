@@ -1,132 +1,156 @@
-[
-  {
-    "id": "real_time_location_tracker",
-    "title": "Real Time Location Tracker",
-    "categories": ["Flutter", "Mobile"],
-    "subtitle": "Mobile productivity app",
-    "image": "assets/projects/locationTracker.jpg",
-    "icon": "✓",
-    "description": "A feature-rich Flutter mobile application built with Google Maps and Geolocator that delivers real-time location tracking, dynamic route recording, interactive map animations, and persistent local storage management for saved paths",
-    "details": "A feature-rich Flutter mobile application built with Google Maps and Geolocator that delivers real-time location tracking, dynamic route recording, interactive map animations, and persistent local storage management for saved paths",
-    "tags": ["Flutter", "Dart", "Google Map API"],
-    "repo": "https://github.com/RahatAlamgir/real_time_location_tracker.git",
-    "youtube": ""
-  },
-  {
-    "id": "flappy-bird",
-    "title": "Flappy Bird Clone",
-    "categories": ["Game Dev", "Flutter", "Mobile"],
-    "subtitle": "Flutter & Flame",
-    "image": "assets/projects/FlappyBird.jpg",
-    "icon": "🐤",
-    "description": "A Flappy Bird-inspired 2D game built with Flutter and the Flame game engine. The project uses game components, collision detection and parallax background.",
-    "details": "Built as a learning project with Flutter, Dart, and Flame. Implemented the bird gameplay, obstacle interactions, collision detection, parallax background and Store best score locally.",
-    "tags": ["Flutter", "Dart", "Flame", "parallax background"],
-    "repo": "https://github.com/RahatAlamgir/flappy_bird.git",
-    "youtube": "https://youtube.com/shorts/QBKQ3Z4OK9U?si=KenCxDbvZViIRkUy"
-  },
-  {
-    "id": "task-manager",
-    "title": "Task Manager App",
-    "categories": ["Flutter", "Mobile"],
-    "subtitle": "Mobile productivity app",
-    "image": "assets/projects/MyTask.jpg",
-    "icon": "✓",
-    "description": "A task management application built with Flutter and Dart using REST API integration.",
-    "details": "User Sign Up and Login, Update Profile, Tasks CRUD operation, Search Tasks, Update Task Status (New, In Progress, Completed)",
-    "tags": ["Flutter", "Dart", "Rest API"],
-    "repo": "https://github.com/RahatAlamgir/task_manager.git",
-    "youtube": ""
-  },
-  {
-    "id": "contact_management_app",
-    "title": "Contact Management App",
-    "categories": ["Flutter", "Mobile"],
-    "subtitle": "Mobile productivity app",
-    "image": "assets/projects/ContactManagementApp.jpg",
-    "icon": "✓",
-    "description": "Flutter Contact Management App built with a local database.",
-    "details": "The app provides complete CRUD functionality for managing contacts, along with search and favorite-contact features. Also can swap between dark and light theme",
-    "tags": ["Flutter", "Dart", "sqflite"],
-    "repo": "https://github.com/RahatAlamgir/contact_management_app.git",
-    "youtube": ""
-  },
-  {
-    "id": "third-person-shooter-prototype",
-    "title": "Third Person Shooter prototype",
-    "categories": ["Game Dev"],
-    "subtitle": "Unity",
-    "image": "assets/projects/3dThirdPersonShooter.jpg",
-    "icon": "🎮",
-    "description": "3D Third person shooter prototype made with Unity",
-    "details": "Main Focus was Third-person character movement (extended starter asset), shooting and Basic object interaction. DOTween for (door/chest animation, moving object)",
-    "tags": ["Unity", "C#", "DOTween", "Starter Assets"],
-    "repo": "https://github.com/RahatAlamgir/Third-person-shooter-prototype.git",
-    "youtube": "https://youtu.be/QGNqRSfj12A?si=bPyxzn1xDXOzzpsN"
-  },
-  {
-    "id": "django-project-sample",
-    "title": "RideSchedule",
-    "categories": ["Web", "Other"],
-    "subtitle": "Web backend",
-    "image": "assets/projects/rideSchedule.jpg",
-    "icon": "🐍",
-    "description": "A Python/Django backend application project.",
-    "details": "Developed using Django MVC structure, SQLite database.",
-    "tags": ["Python", "Django", "SQLite"],
-    "repo": "https://github.com/RahatAlamgir/RideSchedule.git",
-    "youtube": ""
-  },
-  {
-    "id": "action-platformer-prototype",
-    "title": "2D Action Platformer Prototype",
-    "categories": ["Game Dev"],
-    "subtitle": "Godot",
-    "image": "assets/projects/2dActionPlatform.jpg",
-    "icon": "🎮",
-    "description": "Hollow Knight style 2D fast movement action platform made with Godot",
-    "details": "",
-    "tags": ["Godot", "gdscript", "2D"],
-    "repo": "https://github.com/RahatAlamgir/action-platformer.git",
-    "youtube": "https://youtu.be/28O3mSs0PSc?si=zenrWMs_nqlYEtjp"
-  },
-  {
-    "id": "compiler-project",
-    "title": "Mini C-to-Assembly Compiler",
-    "categories": ["Other"],
-    "subtitle": "Core Python",
-    "image": "",
-    "icon": "⚙️",
-    "description": "A mini compiler written in Python supporting arithmetic and control structures.",
-    "details": "Parses custom C-like syntax and emits targeting assembly instructions.",
-    "tags": ["Python", "Compiler", "Assembly"],
-    "repo": "https://github.com/RahatAlamgir/Mini-Compiler.git",
-    "youtube": ""
-  },
-  {
-    "id": "C++-project-clock",
-    "title": "Analog Clock",
-    "categories": ["C++", "Other"],
-    "subtitle": "C++ OpenGL",
-    "image": "assets/projects/analogClock.jpg",
-    "icon": "⚙️",
-    "description": "Analog Clock Using OpenGL and C++",
-    "details": "Analog Clock Using OpenGL and C++",
-    "tags": ["C++", "OpenGL"],
-    "repo": "https://github.com/RahatAlamgir/AnalogClock.git",
-    "youtube": ""
-  },
-  {
-    "id": "C++-project-pacman",
-    "title": "Pacman",
-    "categories": ["Game Dev", "C++"],
-    "subtitle": "C++ OpenGL",
-    "image": "assets/projects/pacman.jpg",
-    "icon": "🎮",
-    "description": "Pac-man game using OpenGL C++",
-    "details": "Pac-man game using OpenGL C++",
-    "tags": ["C++", "OpenGL", "arcade game"],
-    "repo": "https://github.com/RahatAlamgir/Pac-man.git",
-    "youtube": ""
-  }
-]
+{
+  "filters": ["All", "Game Dev", "Mobile", "Web", "C++", "Other"],
+  "pageSize": 6,
+  "items": [
+    {
+      "title": "Real-Time Location Tracker",
+      "kind": "Flutter · Mobile",
+      "categories": ["Mobile"],
+      "image": "assets/projects/locationTracker.jpg",
+      "description": "Live location tracking, route recording and saved paths on Google Maps.",
+      "longDescription": "A Flutter app built with Google Maps and Geolocator that delivers real-time location tracking, dynamic route recording, interactive map animations and local storage for saved paths.",
+      "highlights": [
+        "Real-time position tracking with Geolocator",
+        "Route recording drawn live on Google Maps",
+        "Animated, interactive map camera",
+        "Saved paths stored locally on the device"
+      ],
+      "tags": ["Flutter", "Dart", "Google Maps API"],
+      "repo": "https://github.com/RahatAlamgir/real_time_location_tracker",
+      "youtube": ""
+    },
+    {
+      "title": "Flappy Bird Clone",
+      "kind": "Flutter · Flame",
+      "categories": ["Game Dev", "Mobile"],
+      "image": "assets/projects/FlappyBird.jpg",
+      "description": "2D arcade game with collision detection, parallax backgrounds and a saved best score.",
+      "longDescription": "A Flappy Bird–inspired 2D game built with Flutter and the Flame engine, using game components, collision detection and a parallax background.",
+      "highlights": [
+        "Bird physics and obstacle spawning",
+        "Collision detection with Flame components",
+        "Layered parallax background",
+        "Best score saved locally"
+      ],
+      "tags": ["Flutter", "Dart", "Flame", "Parallax"],
+      "repo": "https://github.com/RahatAlamgir/flappy_bird",
+      "youtube": "https://youtube.com/shorts/QBKQ3Z4OK9U"
+    },
+    {
+      "title": "Third-Person Shooter",
+      "kind": "Unity · 3D prototype",
+      "categories": ["Game Dev"],
+      "image": "assets/projects/3dThirdPersonShooter.jpg",
+      "description": "Third-person movement, shooting and object interaction with DOTween-driven doors and chests.",
+      "longDescription": "A 3D third-person shooter prototype made with Unity, focused on character movement, shooting and basic object interaction.",
+      "highlights": [
+        "Third-person controller extended from Unity Starter Assets",
+        "Shooting mechanics",
+        "Door, chest and moving-object animation with DOTween"
+      ],
+      "tags": ["Unity", "C#", "DOTween", "Starter Assets"],
+      "repo": "https://github.com/RahatAlamgir/Third-person-shooter-prototype",
+      "youtube": "https://youtu.be/QGNqRSfj12A"
+    },
+    {
+      "title": "Task Manager",
+      "kind": "Flutter · Mobile",
+      "categories": ["Mobile"],
+      "image": "assets/projects/MyTask.jpg",
+      "description": "Auth, profile editing, task CRUD, search and status tracking over a REST API.",
+      "longDescription": "A task management app built with Flutter and Dart on top of a REST API.",
+      "highlights": [
+        "Sign up, log in and profile updates",
+        "Create, edit and delete tasks",
+        "Task search",
+        "Status tracking: New, In Progress, Completed"
+      ],
+      "tags": ["Flutter", "Dart", "REST API"],
+      "repo": "https://github.com/RahatAlamgir/task_manager",
+      "youtube": ""
+    },
+    {
+      "title": "2D Action Platformer",
+      "kind": "Godot · 2D prototype",
+      "categories": ["Game Dev"],
+      "image": "assets/projects/2dActionPlatform.jpg",
+      "description": "Fast, responsive movement and combat in a Metroidvania-style platformer.",
+      "longDescription": "A fast-paced 2D action platformer prototype made with Godot, focused on tight, responsive movement.",
+      "highlights": [],
+      "tags": ["Godot", "GDScript", "2D"],
+      "repo": "https://github.com/RahatAlamgir/action-platformer",
+      "youtube": "https://youtu.be/28O3mSs0PSc"
+    },
+    {
+      "title": "Contact Manager",
+      "kind": "Flutter · Mobile",
+      "categories": ["Mobile"],
+      "image": "assets/projects/ContactManagementApp.jpg",
+      "description": "Offline contact book with full CRUD, search, favourites and light/dark themes.",
+      "longDescription": "A Flutter contact management app built on a local SQLite database.",
+      "highlights": [
+        "Add, edit and delete contacts",
+        "Search and favourite contacts",
+        "Light and dark theme switch"
+      ],
+      "tags": ["Flutter", "Dart", "sqflite"],
+      "repo": "https://github.com/RahatAlamgir/contact_management_app",
+      "youtube": ""
+    },
+    {
+      "title": "RideSchedule",
+      "kind": "Django · Web",
+      "categories": ["Web"],
+      "image": "assets/projects/rideSchedule.jpg",
+      "description": "Ride scheduling back end built on Django’s MVC structure.",
+      "longDescription": "A Python/Django back-end application developed with Django's MVC structure and an SQLite database.",
+      "highlights": [],
+      "tags": ["Python", "Django", "SQLite"],
+      "repo": "https://github.com/RahatAlamgir/RideSchedule",
+      "youtube": ""
+    },
+    {
+      "title": "Pac-Man",
+      "kind": "C++ · OpenGL",
+      "categories": ["Game Dev", "C++"],
+      "image": "assets/projects/pacman.jpg",
+      "description": "The arcade classic rebuilt from scratch with OpenGL.",
+      "longDescription": "A Pac-Man game written in C++ with OpenGL.",
+      "highlights": [],
+      "tags": ["C++", "OpenGL", "Arcade"],
+      "repo": "https://github.com/RahatAlamgir/Pac-man",
+      "youtube": ""
+    },
+    {
+      "title": "Mini C-to-Assembly Compiler",
+      "kind": "Python · Compiler",
+      "categories": ["Other"],
+      "image": "",
+      "codePreview": [
+        "// mini_compiler.py",
+        "int x = 4 * (y + 2);",
+        "while (x > 0) { x = x - 1; }",
+        "→ MOV R1, #4",
+        "→ ADD R2, R2, #2"
+      ],
+      "description": "Parses a C-like language with arithmetic and control flow and emits assembly.",
+      "longDescription": "A mini compiler written in Python that parses a custom C-like syntax, supporting arithmetic and control structures, and emits assembly instructions.",
+      "highlights": [],
+      "tags": ["Python", "Compilers", "Assembly"],
+      "repo": "https://github.com/RahatAlamgir/Mini-Compiler",
+      "youtube": ""
+    },
+    {
+      "title": "Analog Clock",
+      "kind": "C++ · OpenGL",
+      "categories": ["C++"],
+      "image": "assets/projects/analogClock.jpg",
+      "description": "A real-time analog clock rendered with OpenGL primitives.",
+      "longDescription": "An analog clock built with C++ and OpenGL.",
+      "highlights": [],
+      "tags": ["C++", "OpenGL"],
+      "repo": "https://github.com/RahatAlamgir/AnalogClock",
+      "youtube": ""
+    }
+  ]
+}

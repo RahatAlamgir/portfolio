@@ -1,29 +1,35 @@
-[
-  {
-    "category": "Flutter Mobile Dev",
-    "items": [
-      { "name": "Flutter & Dart", "level": "85%" },
-      { "name": "Provider", "level": "70%" },
-      { "name": "Firebase", "level": "50%" },
-      { "name": "REST API implementation", "level": "60%" }
-    ]
-  },
-  {
-    "category": "Game Dev",
-    "items": [
-      { "name": "Unity / C#", "level": "70%" },
-      { "name": "Godot / GDScript", "level": "60%" },
-      { "name": "Pygame", "level": "50%" },
-      { "name": "Flame Engine", "level": "50%" }
-    ]
-  },
-  {
-    "category": "Tools & Workflow",
-    "items": [
-      { "name": "Git & GitHub", "level": "85%" },
-      { "name": "VS Code & Android Studio", "level": "82%" },
-      { "name": "Canva", "level": "78%" },
-      { "name": "Figma", "level": "70%" }
-    ]
-  }
-]
+{
+  "languages": ["Dart", "C#", "GDScript", "Python", "C++"],
+  "groups": [
+    {
+      "title": "Mobile",
+      "items": [
+        { "name": "Flutter & Dart", "primary": true },
+        { "name": "Provider" },
+        { "name": "REST APIs" },
+        { "name": "Firebase" },
+        { "name": "sqflite" }
+      ]
+    },
+    {
+      "title": "Games",
+      "items": [
+        { "name": "Unity", "primary": true },
+        { "name": "Godot" },
+        { "name": "Flame engine" },
+        { "name": "DOTween" },
+        { "name": "Pygame" }
+      ]
+    },
+    {
+      "title": "Tools",
+      "items": [
+        { "name": "Git & GitHub" },
+        { "name": "VS Code" },
+        { "name": "Android Studio" },
+        { "name": "Figma" },
+        { "name": "Canva" }
+      ]
+    }
+  ]
+}

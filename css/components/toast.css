@@ -1,0 +1,20 @@
+/* Toast message */
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 200;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  background: var(--inverse);
+  color: var(--inverse-text);
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 12px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }

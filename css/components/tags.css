@@ -1,0 +1,20 @@
+/* Tags and badges */
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: var(--chip);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-soft);
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  font-size: 12px;
+  font-weight: 600;
+}

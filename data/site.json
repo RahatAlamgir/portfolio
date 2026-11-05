@@ -1,140 +1,113 @@
 {
   "meta": {
-    "title": "Rahat Alamgir | Game Dev & Flutter",
-    "description": "Portfolio of Rahat Alamgir — game development and Flutter projects."
+    "title": "Md Rahat Alamgir — Game & Flutter Developer",
+    "description": "Portfolio of Md Rahat Alamgir, a game and Flutter developer from Dhaka building gameplay prototypes and cross-platform mobile apps.",
+    "themeColor": { "dark": "#0A0B0D", "light": "#F5F6F2" }
   },
+
   "brand": {
-    "white": "RAHAT",
-    "green": ".PORTFOLIO"
+    "mark": "RA",
+    "name": "Rahat Alamgir",
+    "homeLabel": "Rahat Alamgir — back to top"
   },
-  "navLinks": [
-    { "label": "About", "href": "#about" },
-    { "label": "Projects", "href": "#projects" },
-    { "label": "Skill", "href": "#skill" },
+
+  "nav": [
+    { "label": "Work", "href": "#work" },
+    { "label": "Videos", "href": "#videos" },
+    { "label": "Services", "href": "#services" },
+    { "label": "Skills", "href": "#skills" },
     { "label": "Education", "href": "#education" },
-    { "label": "Service", "href": "#service" },
     { "label": "Contact", "href": "#contact" }
   ],
-  "navCta": {
-    "label": "Get In Touch",
-    "href": "#contact"
+
+  "header": {
+    "cvLabel": "Download CV",
+    "menuCta": { "label": "Get in touch", "href": "#contact" }
   },
-  "social": {
-    "labels": {
-      "github": "GitHub",
-      "facebook": "Facebook",
-      "linkedin": "LinkedIn"
-    },
-    "heroOrder": ["github", "facebook", "linkedin"],
-    "contactOrder": ["linkedin", "github", "facebook"]
-  },
-  "ui": {
-    "themeToLight": "Switch to light theme",
-    "themeToDark": "Switch to dark theme",
-    "themeIconLight": "☾",
-    "themeIconDark": "☼",
-    "menuOpen": "Open menu",
-    "menuClose": "Close menu",
-    "menuIconOpen": "☰",
-    "menuIconClose": "×",
-    "closeIcon": "×",
-    "themeTitle": "Toggle theme",
-    "mainNav": "Main navigation",
-    "mobileNav": "Mobile navigation",
-    "filterProjects": "Filter projects",
-    "socialLinks": "Social media links",
-    "closeDialog": "Close project details",
-    "photoPlaceholder": "Profile photo placeholder",
-    "copied": "Email copied to clipboard.",
-    "copyFallback": "Email: {email}",
-    "showMore": "Show more projects ({count} remaining)",
-    "noProjects": "No projects found in this category.",
-    "viewDetails": "View project details ↗",
-    "youtubeLink": "YouTube ↗",
-    "repoLink": "GitHub ↗",
-    "noRepo": "Repository not added",
-    "viewSource": "View source code ↗",
-    "watchYoutube": "Watch on YouTube ↗",
-    "fallbackIcon": "📁"
-  },
-  "hero": {
-    "greeting": "Hi! I'm",
-    "role": "Game Developer & Flutter Developer",
-    "buttons": [
-      { "label": "Explore Projects", "href": "#projects", "icon": "gamepad", "style": "primary" },
-      { "label": "Contact Me", "href": "#contact", "icon": "mail", "style": "outline" },
-      { "label": "CV", "hrefFrom": "profile.cv", "style": "outline", "external": true }
-    ],
-    "emailCopyLabel": "Copy email address",
-    "terminal": {
-      "title": "⌁   rahat@developer: ~/portfolio",
-      "status": "PROFILE",
-      "label": "Developer profile code sample",
-      "lines": [
-        { "tokens": [{ "text": "const", "cls": "syntax-purple" }, { "text": " developer = {" }] },
-        { "indent": true, "tokens": [{ "text": "focus", "cls": "syntax-blue" }, { "text": ": " }, { "text": "\"Games & Mobile Apps\"", "cls": "syntax-green" }, { "text": "," }] },
-        { "indent": true, "tokens": [{ "text": "gameEngine", "cls": "syntax-blue" }, { "text": ": " }, { "text": "{\"Unity\",\"Godot\",\"Flame\"}", "cls": "syntax-green" }, { "text": "," }] },
-        { "indent": true, "tokens": [{ "text": "mobile", "cls": "syntax-blue" }, { "text": ": " }, { "text": "\"Flutter / Dart\"", "cls": "syntax-green" }, { "text": "," }] },
-        { "indent": true, "tokens": [{ "text": "learning", "cls": "syntax-blue" }, { "text": ": " }, { "text": "\"Building real projects\"", "cls": "syntax-green" }] },
-        { "tokens": [{ "text": "};" }] },
-        { "br": true },
-        { "tokens": [{ "text": "// One project at a time.", "cls": "syntax-muted" }] },
-        { "tokens": [{ "text": "function", "cls": "syntax-purple" }, { "text": " " }, { "text": "buildSomething", "cls": "syntax-yellow" }, { "text": "() {" }] },
-        { "indent": true, "tokens": [{ "text": "return " }, { "text": "\"Keep learning.\"", "cls": "syntax-green" }, { "text": ";" }] },
-        { "tokens": [{ "text": "}" }] }
-      ],
-      "techPills": ["◈ Flutter", "✦ Dart", "▣ Unity", "▣ C#"]
-    }
-  },
+
+  "stats": [
+    { "label": "Projects on Portfolio", "countCategories": ["All"] },
+    { "label": "Game prototypes", "countCategories": ["Game Dev"] },
+    { "label": "Flutter mobile apps", "countCategories": ["Mobile"] },
+    { "label": "Other projects", "excludeCategories": ["Game Dev", "Mobile"] }
+  ],
+
   "sections": {
-    "about": {
-      "eyebrow": "// ABOUT ME",
-      "title": "A little",
-      "highlight": "about me",
-      "stats": [
-        { "label": "Portfolio projects", "filter": "All" },
-        { "label": "Game development", "filter": "Game Dev" },
-        { "label": "Mobile development", "filter": "Mobile" }
-      ]
+    "work": {
+      "eyebrow": "01 — Selected work",
+      "title": "Projects I've built"
     },
-    "projects": {
-      "eyebrow": "// PROJECT SHOWCASE",
-      "title": "Projects I've",
-      "highlight": "built",
-      "filters": ["All", "Game Dev", "Flutter", "Web", "Mobile", "C++", "Other"],
-      "pageSize": 6
+    "github": {
+      "label": "GitHub activity",
+      "total": "{count} contributions in the last year",
+      "profileButton": "View GitHub profile",
+      "graphLabel": "GitHub contribution graph: {count} contributions in the last year",
+      "tooltip": "{count} contributions on {date}",
+      "tooltipOne": "1 contribution on {date}",
+      "tooltipNone": "No contributions on {date}",
+      "less": "Less",
+      "more": "More"
     },
-    "skills": {
-      "title": "My",
-      "highlight": "Skills"
-    },
-    "education": {
-      "eyebrow": "// EDUCATION",
-      "title": "Education &",
-      "highlight": "growth"
+    "videos": {
+      "eyebrow": "02 — Videos",
+      "title": "Gameplay demos & devlogs",
+      "channelButton": "Visit my YouTube channel",
+      "videoTitle": "{title} — gameplay demo"
     },
     "services": {
-      "title": "My",
-      "highlight": "Services"
+      "eyebrow": "03 — What I do",
+      "title": "From gameplay prototypes to production-ready apps"
+    },
+    "skills": {
+      "eyebrow": "04 — Toolkit",
+      "title": "Skills & tools",
+      "intro": "The stack I reach for day to day, grouped by the kind of work.",
+      "languagesLabel": "Languages",
+      "primaryLabel": "Primary"
+    },
+    "education": {
+      "eyebrow": "05 — Education",
+      "title": "Learning, formally and by building"
     },
     "contact": {
-      "eyebrow": "// CONTACT",
-      "title": "Let's connect",
-      "intro": "I'm interested in junior opportunities, internships, and collaborations related to game development or Flutter apps.",
-      "items": [
-        { "label": "Email", "icon": "✉", "type": "email", "field": "profile.email" },
-        { "label": "Phone", "icon": "☎", "type": "phone", "field": "profile.phone" },
-        { "label": "Address", "icon": "⌖", "type": "text", "field": "profile.location" }
-      ],
-      "note": {
-        "title": "Open to opportunities",
-        "text": "Have a project idea or a suitable junior role? Reach out by email or connect with me on social media.",
-        "button": "Email me ↗"
-      }
+      "eyebrow": "06 — Contact",
+      "title": { "before": "Have a junior role or a ", "highlight": "project", "after": " in mind?" },
+      "lead": "I'm looking for junior positions, internships and collaborations in game development or Flutter. I usually reply within a day.",
+      "emailButton": "Email me",
+      "copyButton": "Copy email",
+      "labels": { "email": "Email", "phone": "Phone", "location": "Based in" }
     }
   },
+
   "footer": {
-    "copyright": "©",
+    "copyright": "© {year} {name}",
     "backToTop": "Back to top ↑"
+  },
+
+  "ui": {
+    "skipLink": "Skip to content",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "themeToLight": "Switch to light theme",
+    "themeToDark": "Switch to dark theme",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "statsLabel": "At a glance",
+    "filterProjects": "Filter projects",
+    "showAll": "Show all {count} projects",
+    "noProjects": "No projects in this category yet.",
+    "sourceCode": "Source code",
+    "watchDemo": "Watch demo",
+    "details": "Details",
+    "detailsLabel": "Details: {title}",
+    "screenshotAlt": "Screenshot of {title}",
+    "dialogClose": "Close project details",
+    "dialogHighlights": "What I built",
+    "dialogStack": "Stack",
+    "viewSource": "View source on GitHub",
+    "watchOnYoutube": "Watch on YouTube",
+    "videoShort": "Short",
+    "videoLong": "Video",
+    "emailCopied": "Email copied to clipboard"
   }
 }

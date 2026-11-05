@@ -1,0 +1,60 @@
+/* Design tokens: accent colour, dark (default) + light themes, fonts, radii */
+
+:root {
+  /* Accent: change these to re-colour the whole site */
+  --accent: #2DD4BF;
+  --on-accent: #0B0D0A;
+  --accent-text: #2DD4BF;
+  --accent-soft: rgba(45, 212, 191, 0.14);
+
+  /* Dark theme (default) */
+  --bg: #0A0B0D;
+  --surface: #121418;
+  --surface-2: #181B20;
+  --line: #23272E;
+  --line-strong: #30353D;
+  --text: #F2F4F7;
+  --text-soft: #C3C9D2;
+  --muted: #97A0AD;
+  --chip: #1C1F25;
+  --inverse: #F2F4F7;
+  --inverse-text: #0A0B0D;
+  --header-bg: rgba(10, 11, 13, 0.82);
+  --glass: rgba(18, 20, 24, 0.85);
+  --shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.7);
+
+  --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+
+  --radius-sm: 8px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --container: 1200px;
+  --header-h: 73px;
+
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --accent-text: #0F766E;
+  --accent-soft: #D9F4EF;
+
+  --bg: #F5F6F2;
+  --surface: #FFFFFF;
+  --surface-2: #ECEEE8;
+  --line: #E2E5DD;
+  --line-strong: #D1D5CB;
+  --text: #0B0D0A;
+  --text-soft: #3A4036;
+  --muted: #596054;
+  --chip: #F0F2EC;
+  --inverse: #0B0D0A;
+  --inverse-text: #FFFFFF;
+  --header-bg: rgba(245, 246, 242, 0.85);
+  --glass: rgba(255, 255, 255, 0.9);
+  --shadow: 0 24px 48px -24px rgba(11, 13, 10, 0.25);
+
+  color-scheme: light;
+}

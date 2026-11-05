@@ -1,0 +1,29 @@
+/* Project filters */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.filter-btn {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-soft);
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.filter-btn:hover { color: var(--text); }
+.filter-btn[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+.filter-btn .count { opacity: 0.6; font-family: var(--font-mono); font-size: 12px; }

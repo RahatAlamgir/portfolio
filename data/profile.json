@@ -1,20 +1,39 @@
 {
   "name": "Md Rahat Alamgir",
-  "initials": "RA",
+  "status": "Open to junior roles & internships",
+
+  "hero": {
+    "title": { "before": "Game & Flutter developer building ", "highlight": "playable", "after": " things and useful apps." },
+    "lead": "I'm Md Rahat Alamgir, a CSE graduate from the University of Asia Pacific in Dhaka. I learn by building projects — gameplay prototypes in Unity and Godot, and cross-platform mobile apps in Flutter.",
+    "primaryCta": { "label": "View my work", "href": "#work" },
+    "secondaryCta": { "label": "Get in touch", "href": "#contact" }
+  },
+
   "photo": {
     "src": "assets/profile.jpg",
-    "alt": "Profile photo of Rahat Alamgir"
+    "alt": "Portrait of Md Rahat Alamgir",
+    "captionLabel": "Currently learning",
+    "caption": "Flutter & AI — Ostad",
+    "location": "Dhaka, BD"
   },
-  "badge": "Open to junior roles and internships",
-  "tagline": "Building small games and mobile projects while growing my development skills.",
-  "bio": "I'm a Computer Science and Engineering student at the University of Asia Pacific with a deep passion for game development and mobile app development with Flutter. I enjoy learning by building projects, experimenting with gameplay mechanics, and creating user-friendly app interfaces.",
+
   "email": "rahatalamgir93@gmail.com",
-  "location": "3/3, Vogoboti Benarjee Road, Tikatuli, Dhaka-1203, Bangladesh",
-  "phone": "+880 1709086651",
+  "phone": "+880 1709 086651",
+  "phoneHref": "tel:+8801709086651",
+  "location": "Dhaka, Bangladesh",
   "cv": "assets/Rahat-Alamgir-CV.pdf",
-  "social": {
-    "github": "https://github.com/RahatAlamgir",
-    "linkedin": "https://www.linkedin.com/in/rahat-alamgir/",
-    "facebook": "https://www.facebook.com/Rahat.A.145/"
-  }
+
+  "github": {
+    "username": "RahatAlamgir",
+    "profileUrl": "https://github.com/RahatAlamgir",
+    "contributionsApi": "https://github-contributions-api.jogruber.de/v4/{username}?y=last",
+    "timeoutMs": 8000
+  },
+
+  "social": [
+    { "id": "github", "label": "GitHub", "icon": "github", "url": "https://github.com/RahatAlamgir" },
+    { "id": "linkedin", "label": "LinkedIn", "icon": "linkedin", "url": "https://www.linkedin.com/in/rahat-alamgir/" },
+    { "id": "youtube", "label": "YouTube", "icon": "youtube", "url": "https://www.youtube.com/@RahatGameplays" },
+    { "id": "facebook", "label": "Facebook", "icon": "facebook", "url": "https://www.facebook.com/Rahat.A.145/" }
+  ]
 }

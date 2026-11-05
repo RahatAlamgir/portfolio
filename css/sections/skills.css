@@ -1,53 +1,35 @@
 /* Skills section */
-/* Custom Skills Section (Reference Style) */
-.skills-grid-custom {
+
+.skills-layout { display: flex; flex-wrap: wrap; gap: 48px; }
+.skills-intro { flex: 1 1 300px; min-width: 0; }
+.skills-intro .muted { margin-top: 16px; }
+.skills-label { margin-top: 28px; }
+
+.lang-list { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.lang-list li {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--inverse);
+  color: var(--inverse-text);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.skill-cards {
+  flex: 999 1 600px;
+  min-width: 0;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 16px;
 }
-
-.skill-category-card {
+.skill-card {
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
   padding: 24px;
-  box-shadow: var(--shadow);
 }
-
-.skill-category-card h3 {
-  font-size: 18px;
-  color: var(--green);
-  margin-bottom: 20px;
-}
-
-.skill-bar-item {
-  margin-bottom: 16px;
-}
-
-.skill-bar-item:last-child {
-  margin-bottom: 0;
-}
-
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 8px;
-}
-
-.skill-progress-track {
-  width: 100%;
-  height: 8px;
-  background: var(--surface2);
-  border-radius: 999px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-
-.skill-progress-fill {
-  height: 100%;
-  background: var(--green);
-  border-radius: 999px;
-}
+.skill-card h3 { font-weight: 600; font-size: 17px; }
+.skill-card ul { margin-top: 16px; display: flex; flex-direction: column; gap: 12px; font-size: 15px; color: var(--text-soft); }
+.skill-card li { display: flex; justify-content: space-between; gap: 12px; }
+.skill-card li:not(:last-child) { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+.primary-tag { font-size: 12px; font-weight: 600; color: var(--accent-text); }

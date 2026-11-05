@@ -1,142 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090d16">
-  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="">
+  <meta name="theme-color" content="#0A0B0D">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <script src="js/theme-init.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2334d399'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' font-weight='700' text-anchor='middle' fill='%23052015'%3ERA%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components/nav.css">
-  <link rel="stylesheet" href="css/sections/hero.css">
-  <link rel="stylesheet" href="css/components/cards.css">
-  <link rel="stylesheet" href="css/components/timeline-contact.css">
-  <link rel="stylesheet" href="css/responsive/base.css">
-  <link rel="stylesheet" href="css/sections/profile-photo.css">
-  <link rel="stylesheet" href="css/themes/light.css">
-  <link rel="stylesheet" href="css/overrides/refinements.css">
-  <link rel="stylesheet" href="css/responsive/tablet-mobile.css">
-  <link rel="stylesheet" href="css/sections/skills.css">
-  <link rel="stylesheet" href="css/sections/services.css">
-  <link rel="stylesheet" href="css/components/dialog.css">
-  <link rel="stylesheet" href="css/responsive/overrides.css">
-  <link rel="stylesheet" href="css/components/load-error.css">
-  <link rel="stylesheet" href="css/themes/material3-light.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/main.css">
+
   <script type="module" src="js/main.js"></script>
 </head>
 <body>
-  <div class="scroll-progress" id="scrollProgress"></div>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#hero">
-        <span class="brand-text"><span class="brand-white" data-text="site.brand.white"></span><span class="brand-green" data-text="site.brand.green"></span></span>
-      </a>
-      <nav class="desktop-nav" data-aria-label="site.ui.mainNav" data-list="nav-links"></nav>
-      <div class="nav-actions">
-        <button class="icon-button" id="themeToggle" data-title="site.ui.themeTitle" type="button"></button>
-        <a class="button button-small" data-href="site.navCta.href" data-text="site.navCta.label"></a>
-        <button class="icon-button mobile-menu-toggle" id="menuToggle" aria-expanded="false" type="button"></button>
-      </div>
-    </div>
-    <nav class="mobile-nav" id="mobileNav" data-aria-label="site.ui.mobileNav" data-list="nav-links"></nav>
-  </header>
+  <a class="skip-link" id="skip-link" href="#main"></a>
 
-  <main class="container">
-    <section class="hero section" id="hero">
-      <div class="hero-copy">
-        <div class="status-pill"><span class="status-dot"></span><span data-text="profile.badge"></span></div>
-        <h3 class="brand-green" data-text="site.hero.greeting"></h3>
-        <h1 class="hero-name" data-text="profile.name"></h1>
-        <h3 class="brand-green" data-text="site.hero.role"></h3>
-        <p class="lead" data-text="profile.tagline"></p>
-        <div class="hero-buttons" data-list="hero-buttons"></div>
-        <div class="social-row" data-list="hero-socials"></div>
-        <p class="small-note" id="copyStatus" aria-live="polite"></p>
-      </div>
-      <div class="terminal-card">
-        <div class="terminal-header"><span data-text="site.hero.terminal.title"></span><span class="online" data-text="site.hero.terminal.status"></span></div>
-        <div class="code-window" data-aria-label="site.hero.terminal.label" data-list="terminal-lines"></div>
-        <div class="tech-pills" data-list="tech-pills"></div>
-      </div>
-    </section>
+  <header class="site-header" id="site-header"></header>
 
-    <section class="section section-border" id="about">
-      <div class="section-heading">
-        <div><p class="eyebrow" data-text="site.sections.about.eyebrow"></p></div>
-      </div>
-      <div class="about-profile-grid">
-        <div class="about-photo-frame">
-          <img class="about-photo" data-src="profile.photo.src" data-alt="profile.photo.alt">
-          <div class="about-photo-placeholder" data-aria-label="site.ui.photoPlaceholder" data-text="profile.initials"></div>
-        </div>
-        <div class="about-profile-copy">
-          <h2><span data-text="site.sections.about.title"></span> <span class="gradient-text" data-text="site.sections.about.highlight"></span></h2>
-          <h3 data-text="profile.name"></h3>
-          <p class="body-copy" data-text="profile.bio"></p>
-          <div class="stat-grid" data-list="about-stats"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-border" id="projects">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow" data-text="site.sections.projects.eyebrow"></p>
-          <h2><span data-text="site.sections.projects.title"></span> <span class="gradient-text" data-text="site.sections.projects.highlight"></span></h2>
-        </div>
-        <div class="filter-row" role="group" data-aria-label="site.ui.filterProjects" data-list="project-filters"></div>
-      </div>
-      <div class="project-grid" id="projectGrid"></div>
-      <div class="projects-more-wrap"><button class="button button-outline" id="showMoreProjects" type="button" hidden></button></div>
-    </section>
-
-    <section class="section section-border" id="skill">
-      <div class="section-heading centered-heading">
-        <h2 style="text-align: center; width: 100%;"><span data-text="site.sections.skills.title"></span> <span class="gradient-text" data-text="site.sections.skills.highlight"></span></h2>
-      </div>
-      <div class="skills-grid-custom" id="skillsContainer"></div>
-    </section>
-
-    <section class="section section-border" id="education">
-      <div class="section-heading"><div><p class="eyebrow" data-text="site.sections.education.eyebrow"></p><h2><span data-text="site.sections.education.title"></span> <span class="gradient-text" data-text="site.sections.education.highlight"></span></h2></div></div>
-      <div class="timeline" id="educationContainer"></div>
-    </section>
-
-    <section class="section section-border" id="service">
-      <div class="section-heading centered-heading">
-        <h2 style="text-align: center; width: 100%;"><span data-text="site.sections.services.title"></span> <span class="gradient-text" data-text="site.sections.services.highlight"></span></h2>
-      </div>
-      <div class="services-grid-custom" id="servicesContainer"></div>
-    </section>
-
-    <section class="section section-border contact-section" id="contact">
-      <div class="contact-copy">
-        <p class="eyebrow" data-text="site.sections.contact.eyebrow"></p>
-        <h2 data-text="site.sections.contact.title"></h2>
-        <p class="body-copy" data-text="site.sections.contact.intro"></p>
-        <div class="contact-details contact-info-grid" data-list="contact-items"></div>
-        <div class="contact-socials" data-aria-label="site.ui.socialLinks" data-list="contact-socials"></div>
-      </div>
-      <div class="contact-note-card">
-        <span class="contact-note-mark" data-text="profile.initials"></span>
-        <h3 data-text="site.sections.contact.note.title"></h3>
-        <p data-text="site.sections.contact.note.text"></p>
-        <a class="button" data-email-button href="#" data-text="site.sections.contact.note.button"></a>
-      </div>
-    </section>
+  <main id="main">
+    <section class="container hero" id="top"></section>
+    <section class="container" id="stats"></section>
+    <section class="container section" id="work"></section>
+    <section class="container" id="github" hidden></section>
+    <section class="container section" id="videos"></section>
+    <section class="container section" id="services"></section>
+    <section class="container section" id="skills"></section>
+    <section class="container section" id="education"></section>
+    <section class="container section" id="contact"></section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-inner"><span><span data-text="site.footer.copyright"></span> <span id="year"></span> <span data-text="profile.name"></span></span><a href="#hero" data-text="site.footer.backToTop"></a></div></footer>
+  <footer class="container site-footer" id="site-footer"></footer>
 
-  <dialog class="project-dialog" id="projectDialog">
-    <button class="dialog-close" id="dialogClose" data-aria-label="site.ui.closeDialog" data-text="site.ui.closeIcon" type="button"></button>
-    <div class="dialog-art" id="dialogArt"></div>
-    <p class="eyebrow" id="dialogCategory"></p><h2 id="dialogTitle"></h2><p id="dialogDescription"></p>
-    <div class="tag-list" id="dialogTags"></div>
-    <div class="dialog-links" id="dialogLinks"></div>
-  </dialog>
+  <dialog class="project-dialog" id="project-dialog"></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
