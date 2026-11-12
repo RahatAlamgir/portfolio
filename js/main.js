@@ -3,6 +3,7 @@
 import { $ } from "./core/dom.js";
 import { loadContent } from "./core/data.js";
 import { renderLoadError } from "./core/load-error.js";
+import { initMotion } from "./core/motion.js";
 
 import { renderHeader } from "./components/header.js";
 import { renderFooter } from "./components/footer.js";
@@ -49,6 +50,7 @@ async function start() {
   renderFooter($("#site-footer"), content);
 
   document.body.classList.add("is-ready");
+  initMotion();
 
   // Live data from an outside service: loads in the background and
   // stays hidden if the service is unavailable.

@@ -19,7 +19,11 @@ export function renderProjects(mount, { site, projects }, openDialog) {
   });
 
   function card(project) {
-    return el("article", { className: "card" }, [
+    return el("article", {
+      className: "card is-clickable",
+      // The whole card opens the details; links and buttons inside keep their own action.
+      onclick: (e) => { if (!e.target.closest("a, button")) openDialog(project); }
+    }, [
       el("div", { className: "card-media" }, [projectMedia(project, ui)]),
       el("div", { className: "card-body" }, [
         el("p", { className: "card-kind", text: project.kind }),

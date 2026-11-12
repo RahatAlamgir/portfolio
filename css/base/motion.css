@@ -1,0 +1,177 @@
+/* Motion: scroll reveal, hero entrance, glitch word, cursor glow, card tilt.
+   Everything is gated on `html.motion`, which js/core/motion.js only adds when the
+   visitor has NOT asked for reduced motion. Without it the page is fully static. */
+
+:root {
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Scroll progress bar ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 60;
+  background: var(--accent);
+  transform-origin: 0 50%;
+  transform: scaleX(var(--progress, 0));
+  pointer-events: none;
+}
+
+/* ---------- Scroll reveal ---------- */
+.motion .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 70ms);
+}
+.motion .reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Hero entrance ---------- */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes photo-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+.motion .hero-text > * {
+  animation: rise 0.8s var(--ease-out) both;
+}
+.motion .hero-text > :nth-child(2) { animation-delay: 0.08s; }
+.motion .hero-text > :nth-child(3) { animation-delay: 0.16s; }
+.motion .hero-text > :nth-child(4) { animation-delay: 0.24s; }
+.motion .hero-text > :nth-child(5) { animation-delay: 0.32s; }
+.motion .hero-photo { animation: photo-in 1s 0.2s var(--ease-out) both; }
+
+/* ---------- Status dot pulse ---------- */
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.45); }
+  100% { box-shadow: 0 0 0 9px rgba(34, 197, 94, 0); }
+}
+.motion .status-dot { animation: pulse 2s ease-out infinite; }
+
+/* ---------- Cursor glow: ONE full-viewport layer behind the whole page,
+   so it has no section seams and reaches the screen edges ---------- */
+.cursor-glow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(420px circle at var(--gx, 50%) var(--gy, 30%), var(--accent-soft), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.cursor-glow.is-on { opacity: 1; }
+
+.motion .hero { position: relative; isolation: isolate; }
+/* faint dot grid in the hero that fades out toward the edges */
+.motion .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(var(--line-strong) 1px, transparent 1.5px);
+  background-size: 28px 28px;
+  opacity: 0.55;
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 45%, #000 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 45%, #000 30%, transparent 100%);
+}
+
+/* ---------- "playable" glitch ---------- */
+.glitch-word {
+  position: relative;
+  display: inline-block;
+}
+.motion .glitch-word::before,
+.motion .glitch-word::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+.motion .glitch-word::before { color: #F43F5E; }
+.motion .glitch-word::after  { color: #38BDF8; }
+
+@keyframes glitch-a {
+  0%   { opacity: 0.85; transform: translate(-3px, 0);  clip-path: inset(10% 0 62% 0); }
+  25%  { opacity: 0.85; transform: translate(3px, 1px);  clip-path: inset(55% 0 12% 0); }
+  50%  { opacity: 0.85; transform: translate(-2px, -1px); clip-path: inset(30% 0 40% 0); }
+  75%  { opacity: 0.85; transform: translate(2px, 0);   clip-path: inset(72% 0 4% 0); }
+  100% { opacity: 0;    transform: none;                 clip-path: inset(0); }
+}
+@keyframes glitch-b {
+  0%   { opacity: 0.85; transform: translate(3px, 0);   clip-path: inset(60% 0 8% 0); }
+  25%  { opacity: 0.85; transform: translate(-3px, -1px); clip-path: inset(8% 0 66% 0); }
+  50%  { opacity: 0.85; transform: translate(2px, 1px);  clip-path: inset(44% 0 28% 0); }
+  75%  { opacity: 0.85; transform: translate(-2px, 0);   clip-path: inset(18% 0 55% 0); }
+  100% { opacity: 0;    transform: none;                 clip-path: inset(0); }
+}
+.motion .glitch-word.is-glitching::before { animation: glitch-a 0.42s steps(1, end) both; }
+.motion .glitch-word.is-glitching::after  { animation: glitch-b 0.42s steps(1, end) both; }
+
+/* ---------- Project card tilt ---------- */
+.motion .card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.motion .card:hover {
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-3px);
+  transition: transform 0.12s ease-out, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ---------- Smooth theme switch ---------- */
+.theme-fade,
+.theme-fade *,
+.theme-fade *::before,
+.theme-fade *::after {
+  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease !important;
+}
+
+/* Touch devices: no hover effects to drive */
+@media (hover: none) {
+  .cursor-glow { display: none; }
+}
+
+/* ---------- Skill chips pop ---------- */
+.motion .reveal.pop {
+  transform: translateY(8px) scale(0.85);
+  transition-delay: calc(var(--i, 0) * 60ms);
+}
+.motion .reveal.pop.is-in { transform: none; }
+
+/* ---------- Sliding nav underline ---------- */
+.motion .nav-links { position: relative; }
+.motion .nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 2px;
+  width: var(--iw, 0px);
+  border-radius: 2px;
+  background: var(--accent);
+  transform: translateX(var(--ix, 0px));
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s var(--ease-out), width 0.35s var(--ease-out), opacity 0.2s ease;
+}
+.motion .nav-links.has-active .nav-indicator { opacity: 1; }
+
+/* ---------- Project dialog open / close ---------- */
+@keyframes dialog-out {
+  to { opacity: 0; transform: translateY(10px) scale(0.98); }
+}
+@keyframes backdrop-in  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes backdrop-out { from { opacity: 1; } to { opacity: 0; } }
+.motion .project-dialog[open] { animation: dialog-in 0.32s var(--ease-out); }
+.motion .project-dialog[open]::backdrop { animation: backdrop-in 0.25s ease-out; }
+.motion .project-dialog.is-closing { animation: dialog-out 0.2s ease-in forwards; }
+.motion .project-dialog.is-closing::backdrop { animation: backdrop-out 0.2s ease-in forwards; }

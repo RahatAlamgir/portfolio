@@ -23,4 +23,6 @@
 @import url("sections/education.css");
 @import url("sections/contact.css");
 
+@import url("base/motion.css");
+
 @import url("responsive.css");
