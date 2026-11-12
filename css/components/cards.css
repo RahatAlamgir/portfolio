@@ -17,9 +17,11 @@
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .card.is-clickable { cursor: pointer; }
+[data-theme="light"] .card { box-shadow: var(--shadow-soft); }
 .card:hover { transform: translateY(-3px); border-color: var(--line-strong); box-shadow: var(--shadow); }
 
 .card-media {
+  position: relative;
   aspect-ratio: 16 / 10;
   background: var(--surface-2);
   overflow: hidden;

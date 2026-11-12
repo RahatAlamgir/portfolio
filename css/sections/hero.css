@@ -9,7 +9,26 @@
   padding-bottom: 56px;
 }
 .hero-text { flex: 999 1 520px; min-width: 0; }
-.hero-photo { flex: 1 1 340px; min-width: 0; max-width: 440px; }
+.hero-photo { position: relative; flex: 1 1 340px; min-width: 0; max-width: 440px; }
+
+/* Corner brackets (a small nod to game UI) */
+.hero-photo::after {
+  --b: var(--accent);
+  content: "";
+  position: absolute;
+  inset: -10px;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(var(--b), var(--b)) top left / 26px 2px no-repeat,
+    linear-gradient(var(--b), var(--b)) top left / 2px 26px no-repeat,
+    linear-gradient(var(--b), var(--b)) top right / 26px 2px no-repeat,
+    linear-gradient(var(--b), var(--b)) top right / 2px 26px no-repeat,
+    linear-gradient(var(--b), var(--b)) bottom left / 26px 2px no-repeat,
+    linear-gradient(var(--b), var(--b)) bottom left / 2px 26px no-repeat,
+    linear-gradient(var(--b), var(--b)) bottom right / 26px 2px no-repeat,
+    linear-gradient(var(--b), var(--b)) bottom right / 2px 26px no-repeat;
+}
 
 .status-pill {
   display: inline-flex;
@@ -34,19 +53,28 @@
 .hero-title {
   margin-top: 24px;
   font-weight: 700;
-  font-size: clamp(40px, 6vw, 72px);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
+  font-size: clamp(44px, 7vw, 88px);
+  line-height: 1;
+  letter-spacing: -0.035em;
 }
 
 .hero-lead {
   margin-top: 24px;
   max-width: 580px;
-  font-size: 18px;
+  font-size: 19px;
   color: var(--muted);
 }
 
-.hero .btn-row { margin-top: 36px; }
+.hero-typed {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--muted);
+  min-height: 1.6em;
+}
+.hero-typed .typed-text { color: var(--accent-text); }
+.hero-typed .typed-caret { display: none; }
+
+.hero .btn-row { margin-top: 28px; }
 
 .hero-social {
   margin-top: 36px;
@@ -59,6 +87,7 @@
 
 .photo-frame {
   position: relative;
+  z-index: 1;
   margin: 0;
   aspect-ratio: 4 / 5;
   border-radius: 20px;

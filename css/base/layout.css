@@ -26,9 +26,9 @@
 .section-title {
   margin-top: 12px;
   font-weight: 700;
-  font-size: clamp(32px, 4vw, 48px);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 .section-title.narrow { max-width: 640px; }
 

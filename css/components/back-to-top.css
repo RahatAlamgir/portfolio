@@ -1,0 +1,19 @@
+/* Floating back-to-top button */
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 40;
+  background: var(--glass);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.back-to-top.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+.back-to-top:hover { color: var(--accent-text); border-color: var(--accent); }

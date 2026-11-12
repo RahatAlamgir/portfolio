@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
   scroll-padding-top: calc(var(--header-h) + 16px);
   -webkit-text-size-adjust: 100%;
 }

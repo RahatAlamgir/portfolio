@@ -51,3 +51,40 @@
 .dialog-columns ul { margin-top: 10px; padding-left: 18px; list-style: disc; font-size: 15px; color: var(--text-soft); display: flex; flex-direction: column; gap: 4px; }
 .dialog-columns .tags { margin-top: 12px; }
 .dialog-body .btn-row { margin-top: 12px; }
+
+/* Previous / next project.
+   Positioned from the dialog width (not the image height) so they never jump
+   between projects whose images differ in size. */
+.dialog-nav {
+  position: absolute;
+  top: calc(min(820px, 100vw - 32px) * 0.21875 - 24px); /* middle of the 16:7 media box */
+  z-index: 1;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--on-accent);
+  color: var(--on-accent);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  transition: transform 0.15s ease;
+}
+.dialog-nav .icon { width: 22px; height: 22px; stroke-width: 2.4; }
+.dialog-nav:hover { transform: scale(1.08); }
+.dialog-nav:active { transform: scale(0.96); }
+.dialog-prev { left: 16px; }
+.dialog-next { right: 16px; }
+.dialog-counter {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--line-strong);
+  color: var(--text-soft);
+}
+
+/* Lock the page behind an open dialog (html has scrollbar-gutter: stable, see reset.css,
+   so the layout does not shift sideways when the page scrollbar disappears). */
+html:has(.project-dialog[open]) { overflow: hidden; }
+.project-dialog { overscroll-behavior: contain; }

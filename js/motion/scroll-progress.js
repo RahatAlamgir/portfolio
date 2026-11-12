@@ -6,15 +6,25 @@ export function setupProgressBar() {
   bar.setAttribute("aria-hidden", "true");
   document.body.prepend(bar);
 
+  // The scrollable distance is measured only when the page size changes, not on
+  // every scroll frame (reading scrollHeight forces a layout).
+  let max = 0;
   let queued = false;
-  const update = () => {
+
+  const paint = () => {
     queued = false;
-    const max = document.documentElement.scrollHeight - innerHeight;
     bar.style.setProperty("--progress", max > 0 ? String(Math.min(scrollY / max, 1)) : "0");
   };
-  addEventListener("scroll", () => {
-    if (!queued) { queued = true; requestAnimationFrame(update); }
-  }, { passive: true });
-  addEventListener("resize", update);
-  update();
+  const schedule = () => {
+    if (!queued) { queued = true; requestAnimationFrame(paint); }
+  };
+  const measure = () => {
+    max = document.documentElement.scrollHeight - innerHeight;
+    schedule();
+  };
+
+  addEventListener("scroll", schedule, { passive: true });
+  new ResizeObserver(measure).observe(document.body); // also covers late content (GitHub graph)
+  addEventListener("resize", measure);
+  measure();
 }

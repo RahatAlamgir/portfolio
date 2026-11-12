@@ -13,6 +13,12 @@ export function renderHero(mount, { profile }) {
     ]),
     el("h1", { className: "hero-title" }, highlightedText(hero.title)),
     el("p", { className: "hero-lead", text: hero.lead }),
+    // Static first phrase; js/motion/typed.js cycles through the rest when motion is allowed
+    el("p", { className: "hero-typed mono", "data-words": JSON.stringify(hero.typed.words) }, [
+      el("span", { className: "typed-prefix", text: `${hero.typed.prefix} ` }),
+      el("span", { className: "typed-text", text: hero.typed.words[0] }),
+      el("span", { className: "typed-caret", "aria-hidden": "true" })
+    ]),
     el("div", { className: "btn-row" }, [
       el("a", { className: "btn btn-accent", href: hero.primaryCta.href }, [hero.primaryCta.label, icon("arrow-right")]),
       el("a", { className: "btn btn-outline", href: hero.secondaryCta.href, text: hero.secondaryCta.label })

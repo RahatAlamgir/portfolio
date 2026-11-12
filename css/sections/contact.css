@@ -14,9 +14,9 @@
 .contact-title {
   margin-top: 12px;
   font-weight: 700;
-  font-size: clamp(34px, 5vw, 60px);
-  line-height: 1.05;
-  letter-spacing: -0.025em;
+  font-size: clamp(38px, 6vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
 }
 .contact-lead { margin-top: 20px; max-width: 520px; font-size: 17px; }
 .contact-main .btn-row { margin-top: 32px; }

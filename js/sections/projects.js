@@ -6,7 +6,7 @@ import { projectMedia, tagList } from "../components/media.js";
 
 export function renderProjects(mount, { site, projects }, openDialog) {
   const { ui } = site;
-  const state = { filter: projects.filters[0] || "All", showAll: false };
+  const state = { filter: projects.filters[0] || "All", showAll: false, list: [] };
 
   const filtersEl = el("div", { className: "filters", role: "group", "aria-label": ui.filterProjects });
   const grid = el("div", { className: "project-grid", "aria-live": "polite" });
@@ -22,7 +22,7 @@ export function renderProjects(mount, { site, projects }, openDialog) {
     return el("article", {
       className: "card is-clickable",
       // The whole card opens the details; links and buttons inside keep their own action.
-      onclick: (e) => { if (!e.target.closest("a, button")) openDialog(project); }
+      onclick: (e) => { if (!e.target.closest("a, button")) openDialog(project, state.list); }
     }, [
       el("div", { className: "card-media" }, [projectMedia(project, ui)]),
       el("div", { className: "card-body" }, [
@@ -37,7 +37,7 @@ export function renderProjects(mount, { site, projects }, openDialog) {
             type: "button",
             className: "details-btn",
             "aria-label": fmt(ui.detailsLabel, { title: project.title }),
-            onclick: () => openDialog(project)
+            onclick: () => openDialog(project, state.list)
           }, [ui.details, icon("arrow-up-right")])
         ])
       ])
@@ -60,6 +60,7 @@ export function renderProjects(mount, { site, projects }, openDialog) {
     const list = state.filter === "All"
       ? projects.items
       : projects.items.filter((p) => p.categories.includes(state.filter));
+    state.list = list;
     const shown = state.showAll ? list : list.slice(0, projects.pageSize);
 
     if (list.length) grid.replaceChildren(...shown.map(card));

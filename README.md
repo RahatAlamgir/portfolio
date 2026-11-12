@@ -18,15 +18,18 @@ assets/
   favicon.svg, profile.jpg, CV, projects/, education/
 css/
   main.css                 Imports everything below in order
-  base/                    tokens (colours, themes, fonts), reset, layout helpers
-  components/              buttons, tags, header, cards, dialog, toast, footer
+  base/                    tokens (colours, themes, fonts), reset, layout helpers,
+                           motion (animations) and cursor (custom cursor)
+  components/              buttons, tags, header, cards, dialog, toast, footer, back-to-top
   sections/                hero, stats, projects, videos, services, skills, education, contact
   responsive.css           Breakpoints + reduced motion
 js/
   main.js                  Loads the JSON, then renders each part
   theme-init.js            Applies the saved theme before first paint
-  core/                    dom helpers, JSON loader, load-error fallback
-  components/              header, theme toggle, mobile menu, active nav, dialog, media, toast, footer
+  core/                    dom helpers, JSON loader, load-error fallback, motion entry point
+  motion/                  one file per effect: reveal, glitch, typed text, cursor glow,
+                           custom cursor, card tilt, count-up, nav underline, dialog close...
+  components/              header, theme toggle, mobile menu, active nav, dialog, media, toast, footer, back-to-top
   sections/                one renderer per section
 ```
 

@@ -7,6 +7,7 @@ import { initMotion } from "./core/motion.js";
 
 import { renderHeader } from "./components/header.js";
 import { renderFooter } from "./components/footer.js";
+import { renderBackToTop } from "./components/back-to-top.js";
 import { createProjectDialog } from "./components/dialog.js";
 
 import { renderHero } from "./sections/hero.js";
@@ -48,6 +49,7 @@ async function start() {
   renderEducation($("#education"), content);
   renderContact($("#contact"), content);
   renderFooter($("#site-footer"), content);
+  renderBackToTop(content.site);
 
   document.body.classList.add("is-ready");
   initMotion();

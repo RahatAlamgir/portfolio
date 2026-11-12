@@ -2,7 +2,7 @@
   "meta": {
     "title": "Md Rahat Alamgir — Game & Flutter Developer",
     "description": "Portfolio of Md Rahat Alamgir, a game and Flutter developer from Dhaka building gameplay prototypes and cross-platform mobile apps.",
-    "themeColor": { "dark": "#0A0B0D", "light": "#F5F6F2" }
+    "themeColor": { "dark": "#0A0B0D", "light": "#F6F4EE" }
   },
 
   "brand": {
@@ -102,6 +102,9 @@
     "detailsLabel": "Details: {title}",
     "screenshotAlt": "Screenshot of {title}",
     "dialogClose": "Close project details",
+    "dialogPrev": "Previous project",
+    "dialogNext": "Next project",
+    "backToTopLabel": "Back to top",
     "dialogHighlights": "What I built",
     "dialogStack": "Stack",
     "viewSource": "View source on GitHub",

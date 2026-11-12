@@ -9,6 +9,8 @@ import { setupCursorGlow } from "../motion/cursor-glow.js";
 import { setupCardTilt } from "../motion/card-tilt.js";
 import { setupCountUp } from "../motion/count-up.js";
 import { setupNavIndicator } from "../motion/nav-indicator.js";
+import { setupCustomCursor } from "../motion/custom-cursor.js";
+import { setupTyped } from "../motion/typed.js";
 import { setupDialogClose } from "../motion/dialog-close.js";
 import { setupThemeFade } from "../motion/theme-fade.js";
 
@@ -23,6 +25,8 @@ export function initMotion() {
   setupCardTilt();
   setupCountUp();
   setupNavIndicator();
+  setupCustomCursor();
+  setupTyped();
   setupDialogClose();
   setupThemeFade();
 }

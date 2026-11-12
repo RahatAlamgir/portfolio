@@ -5,6 +5,7 @@
   "hero": {
     "title": { "before": "Game & Flutter developer building ", "highlight": "playable", "after": " things and useful apps." },
     "lead": "I'm Md Rahat Alamgir, a CSE graduate from the University of Asia Pacific in Dhaka. I learn by building projects — gameplay prototypes in Unity and Godot, and cross-platform mobile apps in Flutter.",
+    "typed": { "prefix": "I build", "words": ["gameplay prototypes in Unity and Godot", "cross-platform apps in Flutter", "small tools that solve real problems"] },
     "primaryCta": { "label": "View my work", "href": "#work" },
     "secondaryCta": { "label": "Get in touch", "href": "#contact" }
   },

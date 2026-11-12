@@ -1,0 +1,75 @@
+/* Custom cursor (see js/motion/custom-cursor.js).
+   Only active when JS has added `has-cursor` to <html> for a mouse-like pointer.
+   Look: the normal arrow, thick teal border, black fill (teal fill over clickable things). */
+
+.has-cursor,
+.has-cursor *,
+.has-cursor *::backdrop { cursor: none !important; }
+
+/* Full-viewport, click-through layer in the top layer (above the dialog) */
+.cursor-layer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+.cursor-layer.is-away,
+html:not(.has-cursor) .cursor-layer { opacity: 0; }
+
+/* Sits exactly on the pointer; the shapes inside are offset so their tip is at 0,0 */
+.cursor-body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.cursor-arrow,
+.cursor-hand {
+  position: absolute;
+  pointer-events: none;
+  overflow: visible;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+}
+.cursor-arrow { left: -3.5px; top: -2.3px; }   /* tip at (3, 2) of 24, drawn at 28px */
+.cursor-hand  { left: -12.3px; top: -1.2px; display: none; } /* fingertip at (10.5, 1) */
+
+.cursor-arrow path,
+.cursor-hand path {
+  /* Dark theme: teal border, black fill */
+  fill: #0A0B0D;
+  stroke: var(--accent);
+  stroke-width: 1.3;
+  stroke-linejoin: round;
+  /* Scale inside the SVG, around the tip, so the cursor never shifts */
+  transform-box: view-box;
+  transition: fill 0.15s ease, stroke 0.15s ease, stroke-width 0.15s ease, transform 0.12s ease;
+}
+.cursor-arrow path { transform-origin: 3px 2px; }
+.cursor-hand path  { transform-origin: 10.5px 1px; }
+
+/* Light theme: black border, teal fill */
+[data-theme="light"] .cursor-arrow path { fill: var(--accent); stroke: #0A0B0D; }
+
+/* Over something clickable (both themes): pointing hand, teal fill, thin black border */
+.cursor-layer.is-hover .cursor-arrow { display: none; }
+.cursor-layer.is-hover .cursor-hand { display: block; }
+.cursor-hand path,
+[data-theme="light"] .cursor-hand path {
+  fill: var(--accent);
+  stroke: #0A0B0D;
+  stroke-width: 1.3;
+}
+
+/* Pressed: tiny squash toward the tip */
+.cursor-layer.is-down .cursor-arrow path,
+.cursor-layer.is-down .cursor-hand path { transform: scale(0.9); }
