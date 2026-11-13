@@ -1,8 +1,20 @@
 {
   "label": "Currently learning",
   "items": [
-    { "title": "App Development with Flutter & AI", "detail": "Ostad", "progress": 60 },
-    { "title": "Game development", "detail": "Unity & Godot prototypes", "progress": 70 },
-    { "title": "AI-assisted app workflows", "detail": "Integrating AI into Flutter apps", "progress": 35 }
+    {
+      "title": "App Development with Flutter & AI",
+      "detail": "Ostad",
+      "progress": 75
+    },
+    {
+      "title": "Game development",
+      "detail": "Unity & Godot prototypes",
+      "progress": 60
+    },
+    {
+      "title": "AI-assisted app workflows",
+      "detail": "Integrating AI into Flutter apps",
+      "progress": 35
+    }
   ]
 }
