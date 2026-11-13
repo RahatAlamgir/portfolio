@@ -6,7 +6,7 @@
       "title": "Real-Time Location Tracker",
       "kind": "Flutter · Mobile",
       "categories": ["Mobile"],
-      "image": "assets/projects/locationTracker.jpg",
+      "image": "assets/projects/locationTracker.webp",
       "description": "Live location tracking, route recording and saved paths on Google Maps.",
       "longDescription": "A Flutter app built with Google Maps and Geolocator that delivers real-time location tracking, dynamic route recording, interactive map animations and local storage for saved paths.",
       "highlights": [
@@ -23,7 +23,7 @@
       "title": "Flappy Bird Clone",
       "kind": "Flutter · Flame",
       "categories": ["Game Dev", "Mobile"],
-      "image": "assets/projects/FlappyBird.jpg",
+      "image": "assets/projects/FlappyBird.webp",
       "description": "2D arcade game with collision detection, parallax backgrounds and a saved best score.",
       "longDescription": "A Flappy Bird–inspired 2D game built with Flutter and the Flame engine, using game components, collision detection and a parallax background.",
       "highlights": [
@@ -40,7 +40,7 @@
       "title": "Third-Person Shooter",
       "kind": "Unity · 3D prototype",
       "categories": ["Game Dev"],
-      "image": "assets/projects/3dThirdPersonShooter.jpg",
+      "image": "assets/projects/3dThirdPersonShooter.webp",
       "description": "Third-person movement, shooting and object interaction with DOTween-driven doors and chests.",
       "longDescription": "A 3D third-person shooter prototype made with Unity, focused on character movement, shooting and basic object interaction.",
       "highlights": [
@@ -56,7 +56,7 @@
       "title": "Task Manager",
       "kind": "Flutter · Mobile",
       "categories": ["Mobile"],
-      "image": "assets/projects/MyTask.jpg",
+      "image": "assets/projects/MyTask.webp",
       "description": "Auth, profile editing, task CRUD, search and status tracking over a REST API.",
       "longDescription": "A task management app built with Flutter and Dart on top of a REST API.",
       "highlights": [
@@ -73,7 +73,7 @@
       "title": "2D Action Platformer",
       "kind": "Godot · 2D prototype",
       "categories": ["Game Dev"],
-      "image": "assets/projects/2dActionPlatform.jpg",
+      "image": "assets/projects/2dActionPlatform.webp",
       "description": "Fast, responsive movement and combat in a Metroidvania-style platformer.",
       "longDescription": "A fast-paced 2D action platformer prototype made with Godot, focused on tight, responsive movement.",
       "highlights": [],
@@ -82,10 +82,41 @@
       "youtube": "https://youtu.be/28O3mSs0PSc"
     },
     {
+      "title": "Expense Tracker",
+      "kind": "Flutter · Mobile",
+      "categories": ["Mobile"],
+      "image": "assets/projects/ExpenseTracker.webp",
+      "description": "A personal finance app built with Flutter for recording daily income and expenses.",
+      "longDescription": "A personal finance app built with Flutter for recording daily income and expenses.",
+      "highlights": [
+        "Add, edit and delete record",
+        "Filter expense/income ",
+        "Light and dark theme switch"
+      ],
+      "tags": ["Flutter", "Dart", "sqflite", "Layer architecture"],
+      "repo": "https://github.com/RahatAlamgir/personal_expense_tracker_app",
+      "youtube": ""
+    },
+    {
+      "title": "Calorie Tracker",
+      "kind": "Flutter · Mobile",
+      "categories": ["Mobile"],
+      "image": "assets/projects/calorieTracker.webp",
+      "description": "A simple Flutter app to log what you eat each day and see how many calories you have left against your daily goal.",
+      "longDescription": "A simple Flutter app to log what you eat each day and see how many calories you have left against your daily goal.",
+      "highlights": [
+        "Add, edit and delete record",
+        "Track total calories eaten, the goal, and calories remaining"
+      ],
+      "tags": ["Flutter", "Dart", "Layer architecture"],
+      "repo": "https://github.com/RahatAlamgir/calorie_tracking_app.git",
+      "youtube": ""
+    },
+    {
       "title": "Contact Manager",
       "kind": "Flutter · Mobile",
       "categories": ["Mobile"],
-      "image": "assets/projects/ContactManagementApp.jpg",
+      "image": "assets/projects/ContactManagementApp.webp",
       "description": "Offline contact book with full CRUD, search, favourites and light/dark themes.",
       "longDescription": "A Flutter contact management app built on a local SQLite database.",
       "highlights": [
@@ -101,7 +132,7 @@
       "title": "RideSchedule",
       "kind": "Django · Web",
       "categories": ["Web"],
-      "image": "assets/projects/rideSchedule.jpg",
+      "image": "assets/projects/rideSchedule.webp",
       "description": "Ride scheduling back end built on Django’s MVC structure.",
       "longDescription": "A Python/Django back-end application developed with Django's MVC structure and an SQLite database.",
       "highlights": [],
@@ -113,7 +144,7 @@
       "title": "Pac-Man",
       "kind": "C++ · OpenGL",
       "categories": ["Game Dev", "C++"],
-      "image": "assets/projects/pacman.jpg",
+      "image": "assets/projects/pacman.webp",
       "description": "The arcade classic rebuilt from scratch with OpenGL.",
       "longDescription": "A Pac-Man game written in C++ with OpenGL.",
       "highlights": [],
@@ -144,7 +175,7 @@
       "title": "Analog Clock",
       "kind": "C++ · OpenGL",
       "categories": ["C++"],
-      "image": "assets/projects/analogClock.jpg",
+      "image": "assets/projects/analogClock.webp",
       "description": "A real-time analog clock rendered with OpenGL primitives.",
       "longDescription": "An analog clock built with C++ and OpenGL.",
       "highlights": [],

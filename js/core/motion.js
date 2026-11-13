@@ -10,11 +10,12 @@ import { setupCardTilt } from "../motion/card-tilt.js";
 import { setupCountUp } from "../motion/count-up.js";
 import { setupNavIndicator } from "../motion/nav-indicator.js";
 import { setupCustomCursor } from "../motion/custom-cursor.js";
+import { setupSecretGame } from "../motion/secret-game.js";
 import { setupTyped } from "../motion/typed.js";
 import { setupDialogClose } from "../motion/dialog-close.js";
 import { setupThemeFade } from "../motion/theme-fade.js";
 
-export function initMotion() {
+export function initMotion(ui) {
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   document.documentElement.classList.add("motion");
 
@@ -27,6 +28,7 @@ export function initMotion() {
   setupNavIndicator();
   setupCustomCursor();
   setupTyped();
+  setupSecretGame(ui.game);
   setupDialogClose();
   setupThemeFade();
 }

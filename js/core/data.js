@@ -6,7 +6,8 @@ const FILES = {
   projects: "data/projects.json",
   services: "data/services.json",
   skills: "data/skills.json",
-  education: "data/education.json"
+  education: "data/education.json",
+  learning: "data/learning.json"
 };
 
 async function loadJSON(path) {

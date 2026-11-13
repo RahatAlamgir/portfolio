@@ -27,3 +27,42 @@
 .filter-btn:hover { color: var(--text); }
 .filter-btn[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
 .filter-btn .count { opacity: 0.6; font-family: var(--font-mono); font-size: 12px; }
+
+/* Pagination (only shown when there is more than one page of projects) */
+.pager {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.pager[hidden] { display: none; }
+.pager-pages { display: flex; gap: 6px; }
+.pager-btn {
+  min-width: 44px;
+  height: 44px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+.pager-step { font-family: var(--font-body); font-weight: 600; padding: 0 16px; }
+.pager-btn:hover:not(:disabled):not([aria-current]) { border-color: var(--accent); color: var(--accent-text); }
+.pager-btn[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.pager-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+@media (max-width: 480px) {
+  .pager { gap: 8px; }
+  .pager-step span { display: none; } /* arrows only on small phones */
+  .pager-step { padding: 0; }
+}

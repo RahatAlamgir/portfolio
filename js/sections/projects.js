@@ -1,22 +1,18 @@
-/* Selected work: filters, project cards, "Show all". */
+/* Selected work: filters, project cards, pagination. */
 
 import { el, icon, externalLink, fmt, sectionHeading } from "../core/dom.js";
 import { countProjects } from "../core/data.js";
 import { projectMedia, tagList } from "../components/media.js";
+import { createPager } from "../components/pagination.js";
 
 export function renderProjects(mount, { site, projects }, openDialog) {
   const { ui } = site;
-  const state = { filter: projects.filters[0] || "All", showAll: false, list: [] };
+  const state = { filter: projects.filters[0] || "All", page: 1, list: [] };
 
   const filtersEl = el("div", { className: "filters", role: "group", "aria-label": ui.filterProjects });
   const grid = el("div", { className: "project-grid", "aria-live": "polite" });
-  const moreButton = el("button", {
-    className: "btn btn-outline",
-    type: "button",
-    id: "show-more",
-    hidden: true,
-    onclick: () => { state.showAll = true; update(); }
-  });
+  const head = el("div", { className: "section-head" }, [el("div", {}, sectionHeading(site.sections.work)), filtersEl]);
+  const pager = createPager(ui, (page) => { state.page = page; update({ animate: true, scroll: true }); });
 
   function card(project) {
     return el("article", {
@@ -50,30 +46,37 @@ export function renderProjects(mount, { site, projects }, openDialog) {
         type: "button",
         className: "filter-btn",
         "aria-pressed": String(state.filter === name),
-        onclick: () => { state.filter = name; state.showAll = false; update(); }
+        onclick: () => { state.filter = name; state.page = 1; update({ animate: true }); }
       }, [name, el("span", { className: "count", text: String(countProjects(projects.items, name)) })])
     ));
   }
 
-  function update() {
+  function update({ animate = false, scroll = false } = {}) {
     renderFilters();
     const list = state.filter === "All"
       ? projects.items
       : projects.items.filter((p) => p.categories.includes(state.filter));
     state.list = list;
-    const shown = state.showAll ? list : list.slice(0, projects.pageSize);
 
-    if (list.length) grid.replaceChildren(...shown.map(card));
-    else grid.replaceChildren(el("p", { className: "empty-state", text: ui.noProjects }));
+    const pages = Math.max(1, Math.ceil(list.length / projects.pageSize));
+    state.page = Math.min(state.page, pages);
+    const start = (state.page - 1) * projects.pageSize;
+    const shown = list.slice(start, start + projects.pageSize);
 
-    moreButton.hidden = state.showAll || list.length <= projects.pageSize;
-    moreButton.textContent = fmt(ui.showAll, { count: list.length });
+    if (list.length) {
+      const cards = shown.map(card);
+      if (animate) cards.forEach((c, i) => { c.classList.add("enter"); c.style.setProperty("--i", String(i)); });
+      grid.replaceChildren(...cards);
+    } else {
+      grid.replaceChildren(el("p", { className: "empty-state", text: ui.noProjects }));
+    }
+
+    pager.update(state.page, pages);
+
+    // Moving to another page from far down: bring the top of the section back into view
+    if (scroll && head.getBoundingClientRect().top < 0) head.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  mount.replaceChildren(
-    el("div", { className: "section-head" }, [el("div", {}, sectionHeading(site.sections.work)), filtersEl]),
-    grid,
-    el("div", { className: "center" }, [moreButton])
-  );
+  mount.replaceChildren(head, grid, pager.element);
   update();
 }

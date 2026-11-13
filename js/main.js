@@ -12,6 +12,7 @@ import { createProjectDialog } from "./components/dialog.js";
 
 import { renderHero } from "./sections/hero.js";
 import { renderStats } from "./sections/stats.js";
+import { renderLearning } from "./sections/learning.js";
 import { renderProjects } from "./sections/projects.js";
 import { renderGithub } from "./sections/github.js";
 import { renderVideos } from "./sections/videos.js";
@@ -46,13 +47,14 @@ async function start() {
   renderVideos($("#videos"), content);
   renderServices($("#services"), content);
   renderSkills($("#skills"), content);
+  renderLearning($("#learning"), content);
   renderEducation($("#education"), content);
   renderContact($("#contact"), content);
   renderFooter($("#site-footer"), content);
   renderBackToTop(content.site);
 
   document.body.classList.add("is-ready");
-  initMotion();
+  initMotion(content.site.ui);
 
   // Live data from an outside service: loads in the background and
   // stays hidden if the service is unavailable.

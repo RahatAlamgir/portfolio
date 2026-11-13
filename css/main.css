@@ -12,10 +12,12 @@
 @import url("components/toast.css");
 @import url("components/footer.css");
 @import url("components/back-to-top.css");
+@import url("components/mini-game.css");
 @import url("components/load-error.css");
 
 @import url("sections/hero.css");
 @import url("sections/stats.css");
+@import url("sections/learning.css");
 @import url("sections/projects.css");
 @import url("sections/github.css");
 @import url("sections/videos.css");

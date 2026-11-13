@@ -188,3 +188,9 @@
 .theme-fade *::after {
   transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease !important;
 }
+
+/* ---------- Project cards appear when the filter or page changes ---------- */
+.motion .card.enter {
+  animation: rise 0.5s var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 60ms);
+}

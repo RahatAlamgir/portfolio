@@ -3,15 +3,15 @@
   "status": "Open to junior roles & internships",
 
   "hero": {
-    "title": { "before": "Game & Flutter developer building ", "highlight": "playable", "after": " things and useful apps." },
-    "lead": "I'm Md Rahat Alamgir, a CSE graduate from the University of Asia Pacific in Dhaka. I learn by building projects — gameplay prototypes in Unity and Godot, and cross-platform mobile apps in Flutter.",
+    "title": { "before": "Game & Flutter", "highlight": "developer", "after": " " },
+    "lead": "I'm Md Rahat Alamgir, a Computer Science and Engineering graduate from the University of Asia Pacific. I have a strong passion for game development and Flutter mobile app development. I'm eager to gain hands-on experience, contribute to real-world projects, and continue growing as a developer.",
     "typed": { "prefix": "I build", "words": ["gameplay prototypes in Unity and Godot", "cross-platform apps in Flutter", "small tools that solve real problems"] },
     "primaryCta": { "label": "View my work", "href": "#work" },
     "secondaryCta": { "label": "Get in touch", "href": "#contact" }
   },
 
   "photo": {
-    "src": "assets/profile.jpg",
+    "src": "assets/profile.webp",
     "alt": "Portrait of Md Rahat Alamgir",
     "captionLabel": "Currently learning",
     "caption": "Flutter & AI — Ostad",
