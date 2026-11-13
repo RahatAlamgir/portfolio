@@ -13,6 +13,9 @@ export const FILES = [
   { path: "data/site.json", label: "Site text & SEO" }
 ];
 
+// `state.current` value for the file manager screen (every other value is a data file path)
+export const ASSETS = "assets";
+
 // String fields holding a file path in the repo get an upload button (value = default folder).
 export const FILE_KEYS = { image: "assets/projects", logo: "assets/education", src: "assets", cv: "assets" };
 export const MAX_IMAGE_WIDTH = 1200;

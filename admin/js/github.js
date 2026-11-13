@@ -40,6 +40,13 @@ export function putFile(path, contentB64, message, sha) {
   });
 }
 
+export function deleteFile(path, message, sha) {
+  return api(contentsUrl(path), {
+    method: "DELETE",
+    body: JSON.stringify({ message, sha, branch: state.cfg.branch })
+  });
+}
+
 /** Sha of an existing file, or undefined when it does not exist yet. */
 export async function existingSha(path) {
   try { return (await api(`${contentsUrl(path)}${refQuery()}`)).sha; }

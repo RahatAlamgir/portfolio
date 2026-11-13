@@ -131,6 +131,33 @@ details.card[open] > summary::before { transform: rotate(90deg); }
 .img-main .btn { margin-top: 6px; }
 .img-note { margin-left: 8px; font-size: 13px; color: var(--accent-text); }
 
+/* Assets manager */
+.side-sep { width: 100%; margin: 6px 0; border: 0; border-top: 1px solid var(--line); }
+.asset-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; }
+.asset-tools input[type="text"] { flex: 1; min-width: 160px; width: auto; }
+.asset-tools select {
+  padding: 6px 8px; border: 1px solid var(--line-strong); border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--text); font: 13px var(--font-mono);
+}
+.btn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); }
+.asset-grid { display: grid; gap: 10px; }
+.asset {
+  display: flex; gap: 14px; padding: 12px;
+  border: 1px solid var(--line-strong); border-radius: var(--radius-lg); background: var(--surface);
+}
+.asset-thumb {
+  flex: none; width: 96px; height: 96px; object-fit: contain;
+  border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface-2);
+}
+.asset-thumb.file { display: grid; place-items: center; font: 600 13px var(--font-mono); color: var(--muted); }
+.asset-info { min-width: 0; flex: 1; }
+.asset-path { display: block; font: 600 13px var(--font-mono); word-break: break-all; }
+.asset-meta { margin: 2px 0 6px; font: 12px var(--font-mono); }
+.asset-used { font-size: 13px; color: var(--accent-text); }
+.asset-used.none { color: var(--muted); }
+.asset-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.asset-foot { margin-top: 16px; font-size: 13px; }
+
 .raw { width: 100%; min-height: 60vh; font: 13px/1.5 var(--font-mono); white-space: pre; resize: vertical; }
 .error { margin: 8px 0; color: #f87171; font-size: 14px; }
 

@@ -1,6 +1,7 @@
 /* The main editor screen: sidebar, panel header, form or raw view, save bar. */
 
-import { FILES, state, docs, pending, hooks, dirty, refreshDirty } from "./state.js";
+import { FILES, ASSETS, state, docs, pending, hooks, dirty, refreshDirty } from "./state.js";
+import { assetsView } from "./assets.js";
 import { loadDoc } from "./github.js";
 import { app, el, toast } from "./util.js";
 import { objectEditor, arrayEditor, rawEditor } from "./fields.js";
@@ -23,16 +24,32 @@ export async function start() {
 
 export function render() {
   const scroll = window.scrollY;
+  const go = (target) => { state.current = target; state.mode = "form"; render(); window.scrollTo(0, 0); };
+
+  const side = el("nav", { className: "side", "aria-label": "Content files" }, [
+    ...FILES.map((f) =>
+      el("button", {
+        type: "button",
+        "aria-current": f.path === state.current ? "true" : "false",
+        onclick: () => go(f.path)
+      }, [f.label, el("span", { className: "dot", "data-dot": f.path, hidden: !dirty(f.path) })])
+    ),
+    el("hr", { className: "side-sep" }),
+    el("button", { type: "button", "aria-current": state.current === ASSETS ? "true" : "false", onclick: () => go(ASSETS) }, "Assets")
+  ]);
+
+  if (state.current === ASSETS) {
+    const head = el("div", { className: "panel-head" }, [
+      el("h2", { text: "Assets" }),
+      el("span", { className: "path", text: "assets/ · images, PDFs and other files" })
+    ]);
+    app.replaceChildren(el("div", { className: "shell" }, [side, el("section", {}, [head, assetsView()])]));
+    window.scrollTo(0, scroll);
+    return;
+  }
+
   const doc = docs[state.current];
   const meta = FILES.find((f) => f.path === state.current);
-
-  const side = el("nav", { className: "side", "aria-label": "Content files" }, FILES.map((f) =>
-    el("button", {
-      type: "button",
-      "aria-current": f.path === state.current ? "true" : "false",
-      onclick: () => { state.current = f.path; state.mode = "form"; render(); window.scrollTo(0, 0); }
-    }, [f.label, el("span", { className: "dot", "data-dot": f.path, hidden: !dirty(f.path) })])
-  ));
 
   const head = el("div", { className: "panel-head" }, [
     el("h2", { text: meta.label }),

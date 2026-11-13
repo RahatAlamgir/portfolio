@@ -9,6 +9,8 @@ index.html                 Empty page shell: one mount point per section
 404.html                   Standalone "page not found" page (GitHub Pages serves it automatically)
 robots.txt, sitemap.xml    Search engine files (update the URL inside if the site address changes)
 admin/                      Private editor at /admin/ (needs a GitHub token with write access to the repo; saves commit to GitHub)
+                            Hidden entry from the site: type "admin", or tap the footer copyright 5 times (js/core/admin-link.js)
+                            "Assets" tab (js/assets.js): list, upload, replace, rename, delete files in assets/
   js/                       main (entry), editor (screen), fields (forms), uploads (images), github (API), auth, save, state, util
 data/
   site.json                Page title, nav, section headings, stats, button/label text

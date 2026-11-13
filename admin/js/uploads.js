@@ -63,27 +63,42 @@ export function fileField(parent, key, label) {
   ]);
 }
 
+export const isConvertible = (file) => /^image\/(png|jpe?g|webp)$/.test(file.type);
+
+/** Resize a PNG / JPG / WebP and re-encode it as WebP. */
+export async function toWebpBlob(file) {
+  const bitmap = await createImageBitmap(file);
+  const scale = Math.min(1, MAX_IMAGE_WIDTH / bitmap.width);
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(bitmap.width * scale);
+  canvas.height = Math.round(bitmap.height * scale);
+  canvas.getContext("2d").drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/webp", 0.82));
+  if (!blob) throw new Error("This browser cannot convert to WebP.");
+  return blob;
+}
+
+export const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
+
+export async function blobToB64(blob) {
+  const url = await readAsDataURL(blob);
+  return url.slice(url.indexOf(",") + 1);
+}
+
 /** Photos are resized and converted to WebP in the browser, like the site's existing images. */
-async function prepareUpload(file, key, currentValue) {
+export async function prepareUpload(file, key, currentValue) {
   const folder = currentValue && currentValue.includes("/") ? currentValue.slice(0, currentValue.lastIndexOf("/")) : FILE_KEYS[key];
   const base = file.name.replace(/\.[^.]+$/, "").replace(/[^a-z0-9_-]+/gi, "-").replace(/^-+|-+$/g, "") || "file";
   let blob = file;
   let ext = (file.name.match(/\.([a-z0-9]+)$/i)?.[1] || "bin").toLowerCase();
 
-  if (/^image\/(png|jpe?g|webp)$/.test(file.type)) {
-    const bitmap = await createImageBitmap(file);
-    const scale = Math.min(1, MAX_IMAGE_WIDTH / bitmap.width);
-    const canvas = document.createElement("canvas");
-    canvas.width = Math.round(bitmap.width * scale);
-    canvas.height = Math.round(bitmap.height * scale);
-    canvas.getContext("2d").drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-    blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/webp", 0.82));
-    if (!blob) throw new Error("This browser cannot convert to WebP.");
+  if (isConvertible(file)) {
+    blob = await toWebpBlob(file);
     ext = "webp";
   } else if (key !== "cv" && file.type !== "image/svg+xml") {
     throw new Error("Please choose a PNG, JPG, WebP or SVG image.");
   }
-  if (blob.size > 5 * 1024 * 1024) throw new Error("File is larger than 5 MB.");
+  if (blob.size > MAX_UPLOAD_BYTES) throw new Error("File is larger than 5 MB.");
 
   const url = await readAsDataURL(blob);
   return { path: `${folder}/${base}.${ext}`, b64: url.slice(url.indexOf(",") + 1), url, size: blob.size };

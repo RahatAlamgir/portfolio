@@ -4,6 +4,7 @@ import { $ } from "./core/dom.js";
 import { loadContent } from "./core/data.js";
 import { renderLoadError } from "./core/load-error.js";
 import { initMotion } from "./core/motion.js";
+import { setupAdminLink } from "./core/admin-link.js";
 
 import { renderHeader } from "./components/header.js";
 import { renderFooter } from "./components/footer.js";
@@ -55,6 +56,7 @@ async function start() {
 
   document.body.classList.add("is-ready");
   initMotion(content.site.ui);
+  setupAdminLink();
 
   // Live data from an outside service: loads in the background and
   // stays hidden if the service is unavailable.
